@@ -13,6 +13,7 @@ import {grey400, darkBlack, lightBlack} from 'material-ui/styles/colors';
 import Subheader from 'material-ui/Subheader';
 import Avatar from 'material-ui/Avatar';
 import Popover from 'material-ui/Popover';
+import NavDrawer from './common/NavDrawer';
 
 var styleDrawer = {
     backgroundColor: '#1a292c'
@@ -62,24 +63,7 @@ class Master extends React.Component {
         return (
             <div>
                 {/*left nav bar with the menu application*/}
-                <Drawer open={true} zDepth={1} containerStyle={styleDrawer}>
-                    <List>
-                        <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Início" leftIcon={<FontIcon style={styleWhite} className="material-icons">home</FontIcon>} />
-                        <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Avisos" leftIcon={<FontIcon style={styleWhite} className="material-icons">announcement</FontIcon>} />
-                        <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Enquetes" leftIcon={<FontIcon style={styleWhite} className="material-icons">view_list</FontIcon>} />
-                        <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Forum" leftIcon={<FontIcon style={styleWhite} className="material-icons">forum</FontIcon>} />
-                        <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Portaria" leftIcon={<FontIcon style={styleWhite} className="material-icons">store</FontIcon>}
-                              nestedItems={[
-                                  <ListItem hoverColor={deepOrangeA400} style={styleWhite} key={1} primaryText="Visitas" leftIcon={<FontIcon style={styleWhite} className="material-icons">assignment_turned_in</FontIcon>} />,
-                                  <ListItem hoverColor={deepOrangeA400} style={styleWhite} key={2} primaryText="Encomendas" leftIcon={<FontIcon style={styleWhite} className="material-icons">assignment_returned</FontIcon>} />,
-                                  <ListItem hoverColor={deepOrangeA400} style={styleWhite} key={3} primaryText="Porteiros" leftIcon={<FontIcon style={styleWhite} className="material-icons">assignment_ind</FontIcon>} />,
-                              ]}
-                        />
-                        <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Reservas" leftIcon={<FontIcon style={styleWhite} className="material-icons">event</FontIcon>} />
-                        <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Colaboradores" leftIcon={<FontIcon style={styleWhite} className="material-icons">recent_actors</FontIcon>} />
-                        <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Administração" leftIcon={<FontIcon style={styleWhite} className="material-icons">account_balance</FontIcon>} />
-                    </List>
-                </Drawer>
+                <NavDrawer />
                 {/*the content itself with a padding left from the nav bar */}
                 <div style={styleContent}>
                     <Toolbar>
