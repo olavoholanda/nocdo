@@ -1,16 +1,58 @@
+/* TODO: - Change icon color of nested list (Or remove nested list, if nested list is removed we dont have the problem of
+           scrollbar)
+         - Div of the avatar and personal operates like a button and links to the profile page
+         - Move all styles to the appropriate .css
+*/
+
 import React from "react";
 import FontIcon from "material-ui/FontIcon";
 import {List, ListItem} from "material-ui/List";
 import Drawer from "material-ui/Drawer";
-import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from "material-ui/Toolbar";
-import {blueGrey900, deepOrangeA400, white} from "material-ui/styles/colors";
+import Divider from "material-ui/Divider";
+import Avatar from "material-ui/Avatar";
+import {blueGrey900, blueGrey400, deepOrangeA400, white} from "material-ui/styles/colors";
+import logo from '../../../logo.svg';
 
 var styleDrawer = {
     backgroundColor: blueGrey900
 }
 
+var styleDivLogo = {
+    height: 56,
+    textAlign: "center",
+}
+
+var styleLogo = {
+    height: 30,
+    marginTop: 8
+}
+
 var styleWhite = {
     color: white
+}
+
+var styleAvatar = {
+    margin: 20,
+    float: "left"
+}
+
+var stylePersonalInfo = {
+    color: white,
+    fontSize: 15,
+    fontWeight: "bold",
+    paddingTop: 33
+}
+
+var styleRole = {
+    color: deepOrangeA400,
+    fontSize: 13,
+    fontWeight: "normal",
+    fontStyle: "italic"
+}
+
+var styleDivider = {
+    backgroundColor: blueGrey400,
+    width: "90%"
 }
 
 class NavDrawer extends React.Component {
@@ -18,6 +60,23 @@ class NavDrawer extends React.Component {
     render() {
         return (
             <Drawer open={true} zDepth={1} containerStyle={styleDrawer}>
+                <div style={styleDivLogo}>
+                    <img src={logo} style={styleLogo} alt="logo" />
+                </div>
+                <Divider style={styleDivider}/>
+                <div>
+                    <Avatar
+                        src="https://yt3.ggpht.com/-9nv7QwZ_ivY/AAAAAAAAAAI/AAAAAAAAAAA/ukmYLAq5k8s/s900-c-k-no-mo-rj-c0xffffff/photo.jpg"
+                        size={70}
+                        style={styleAvatar}
+                    />
+                    <div style={stylePersonalInfo}>
+                        <span>Irmão do Jorel</span>
+                        <br/>
+                        <span style={styleRole}>Morador</span>
+                    </div>
+                </div>
+                <Divider style={styleDivider}/>
                 <List>
                     <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Início"
                               leftIcon={<FontIcon style={styleWhite} className="material-icons">home</FontIcon>}/>
