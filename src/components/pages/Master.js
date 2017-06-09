@@ -9,6 +9,10 @@ import {List, ListItem} from 'material-ui/List';
 import Drawer from 'material-ui/Drawer';
 import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
 import {blueGrey900, white, deepOrangeA400} from 'material-ui/styles/colors';
+import {grey400, darkBlack, lightBlack} from 'material-ui/styles/colors';
+import Subheader from 'material-ui/Subheader';
+import Avatar from 'material-ui/Avatar';
+import Popover from 'material-ui/Popover';
 
 var styleDrawer = {
     backgroundColor: '#1a292c'
@@ -31,12 +35,28 @@ class Master extends React.Component {
 
     constructor(props) {
         super(props);
+
         this.state = {
-            value: 3,
+            open: false,
         };
     }
 
-    handleChange = (event, index, value) => this.setState({value});
+    handleTouchTap = (event) => {
+        // This prevents ghost click.
+        event.preventDefault();
+
+        this.setState({
+            open: true,
+            anchorEl: event.currentTarget,
+        });
+    };
+
+    handleRequestClose = () => {
+        this.setState({
+            open: false,
+        });
+    };
+
 
     render() {
         return (
@@ -72,17 +92,85 @@ class Master extends React.Component {
                             />
                         </ToolbarGroup>
                         <ToolbarGroup>
+                            <IconButton touch={true} onTouchTap={this.handleTouchTap}>
+                                <FontIcon className="material-icons">notifications</FontIcon>
+                            </IconButton>
+                            <Popover
+                                open={this.state.open}
+                                anchorEl={this.state.anchorEl}
+                                anchorOrigin={{horizontal: "right", vertical: "bottom"}}
+                                targetOrigin={{horizontal: "right", vertical: "top"}}
+                                onRequestClose={this.handleRequestClose}
+                            >
+                                <List>
+                                    <Subheader>Today</Subheader>
+                                    <ListItem
+                                        leftAvatar={<Avatar src="http://lorempixel.com/200/200/people" />}
+                                        primaryText="Brunch this weekend?"
+                                        secondaryText={
+                                            <p>
+                                                <span style={{color: darkBlack}}>Brendan Lim</span> --
+                                                I&apos;ll be in your neighborhood doing errands this weekend. Do you want to grab brunch?
+                                            </p>
+                                        }
+                                        secondaryTextLines={2}
+                                    />
+                                    <Divider inset={true} />
+                                    <ListItem
+                                        leftAvatar={<Avatar src="http://lorempixel.com/200/200/people" />}
+                                        primaryText={
+                                            <p>Summer BBQ&nbsp;&nbsp;<span style={{color: lightBlack}}>4</span></p>
+                                        }
+                                        secondaryText={
+                                            <p>
+                                                <span style={{color: darkBlack}}>to me, Scott, Jennifer</span> --
+                                                Wish I could come, but I&apos;m out of town this weekend.
+                                            </p>
+                                        }
+                                        secondaryTextLines={2}
+                                    />
+                                    <Divider inset={true} />
+                                    <ListItem
+                                        leftAvatar={<Avatar src="http://lorempixel.com/200/200/people" />}
+                                        primaryText="Oui oui"
+                                        secondaryText={
+                                            <p>
+                                                <span style={{color: darkBlack}}>Grace Ng</span> --
+                                                Do you have Paris recommendations? Have you ever been?
+                                            </p>
+                                        }
+                                        secondaryTextLines={2}
+                                    />
+                                    <Divider inset={true} />
+                                    <ListItem
+                                        leftAvatar={<Avatar src="http://lorempixel.com/200/200/people" />}
+                                        primaryText="Birdthday gift"
+                                        secondaryText={
+                                            <p>
+                                                <span style={{color: darkBlack}}>Kerem Suer</span> --
+                                                Do you have any ideas what we can get Heidi for her birthday? How about a pony?
+                                            </p>
+                                        }
+                                        secondaryTextLines={2}
+                                    />
+                                    <Divider inset={true} />
+                                    <ListItem
+                                        leftAvatar={<Avatar src="http://lorempixel.com/200/200/people" />}
+                                        primaryText="Recipe to try"
+                                        secondaryText={
+                                            <p>
+                                                <span style={{color: darkBlack}}>Raquel Parrado</span> --
+                                                We should eat this: grated squash. Corn and tomatillo tacos.
+                                            </p>
+                                        }
+                                        secondaryTextLines={2}
+                                    />
+                                </List>
+                            </Popover>
 
                             <IconMenu
-                                iconButtonElement={
-                                    <IconButton touch={true}>
-                                        <FontIcon className="material-icons">notifications</FontIcon>
-                                    </IconButton>
-                                }>
-                                {/*aqui tem que ser um popover com os avatares e as ações deles*/}
-                            </IconMenu>
-
-                            <IconMenu
+                                anchorOrigin={{horizontal: "right", vertical: "bottom"}}
+                                targetOrigin={{horizontal: "right", vertical: "top"}}
                                 iconButtonElement={
                                     <IconButton touch={true}>
                                         <FontIcon className="material-icons">person</FontIcon>
