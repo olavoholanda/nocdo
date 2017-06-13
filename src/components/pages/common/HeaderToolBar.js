@@ -7,7 +7,7 @@ import Divider from 'material-ui/Divider'
 import FlatButton from 'material-ui/FlatButton'
 import {List, ListItem} from 'material-ui/List'
 import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar'
-import {darkBlack, lightBlack} from 'material-ui/styles/colors'
+import {darkBlack, lightBlack, grey400} from 'material-ui/styles/colors'
 import Subheader from 'material-ui/Subheader'
 import Avatar from 'material-ui/Avatar'
 import Popover from 'material-ui/Popover'
@@ -17,6 +17,10 @@ import Badge from 'material-ui/Badge'
 var labelStyle = {
     textTransform: "capitalize",
     fontSize: 16
+};
+
+let style = {
+    backgroundColor: grey400
 };
 
 class HeaderToolBar extends React.Component {
@@ -48,7 +52,7 @@ class HeaderToolBar extends React.Component {
 
     render() {
         return (
-            <Toolbar>
+            <Toolbar style={style}>
                 <ToolbarGroup firstChild={true}>
                     {/*disable this icon and put an screent title icon*/}
                     <FlatButton

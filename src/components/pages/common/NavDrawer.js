@@ -1,6 +1,4 @@
-/* TODO: - Change icon color of nested list (Or remove nested list, if nested list is removed we dont have the problem of
-           scrollbar)
-         - Div of the avatar and personal operates like a button and links to the profile page
+/* TODO: - Div of the avatar and personal operates like a button and links to the profile page
          - Move all styles to the appropriate .css
 */
 
@@ -66,12 +64,12 @@ class NavDrawer extends React.Component {
                 <Divider style={styleDivider}/>
                 <div>
                     <Avatar
-                        src="https://yt3.ggpht.com/-9nv7QwZ_ivY/AAAAAAAAAAI/AAAAAAAAAAA/ukmYLAq5k8s/s900-c-k-no-mo-rj-c0xffffff/photo.jpg"
+                        src="/avatars/seth.jpg"
                         size={70}
                         style={styleAvatar}
                     />
                     <div style={stylePersonalInfo}>
-                        <span>Irmão do Jorel</span>
+                        <span>Seth Cohen</span>
                         <br/>
                         <span style={styleRole}>Morador</span>
                     </div>
@@ -89,23 +87,23 @@ class NavDrawer extends React.Component {
                               leftIcon={<FontIcon style={styleWhite} className="material-icons">forum</FontIcon>}/>
                     <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Portaria"
                               leftIcon={<FontIcon style={styleWhite} className="material-icons">store</FontIcon>}
-                              nestedItems={[
-                                  <ListItem hoverColor={deepOrangeA400} style={styleWhite} key={1} primaryText="Visitas"
-                                            leftIcon={<FontIcon style={styleWhite} className="material-icons">assignment_turned_in</FontIcon>}/>,
-                                  <ListItem hoverColor={deepOrangeA400} style={styleWhite} key={2}
-                                            primaryText="Encomendas"
-                                            leftIcon={<FontIcon style={styleWhite} className="material-icons">assignment_returned</FontIcon>}/>,
-                                  <ListItem hoverColor={deepOrangeA400} style={styleWhite} key={3}
-                                            primaryText="Porteiros"
-                                            leftIcon={<FontIcon style={styleWhite} className="material-icons">assignment_ind</FontIcon>}/>,
-                              ]}
+                              // nestedItems={[
+                              //     <ListItem hoverColor={deepOrangeA400} style={styleWhite} key={1} primaryText="Visitas"
+                              //               leftIcon={<FontIcon style={styleWhite} className="material-icons">assignment_turned_in</FontIcon>}/>,
+                              //     <ListItem hoverColor={deepOrangeA400} style={styleWhite} key={2}
+                              //               primaryText="Encomendas"
+                              //               leftIcon={<FontIcon style={styleWhite} className="material-icons">assignment_returned</FontIcon>}/>,
+                              //     <ListItem hoverColor={deepOrangeA400} style={styleWhite} key={3}
+                              //               primaryText="Porteiros"
+                              //               leftIcon={<FontIcon style={styleWhite} className="material-icons">assignment_ind</FontIcon>}/>,
+                              // ]}
                     />
                     <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Reservas"
                               leftIcon={<FontIcon style={styleWhite} className="material-icons">event</FontIcon>}/>
                     <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Colaboradores"
                               leftIcon={<FontIcon style={styleWhite}
                                                   className="material-icons">recent_actors</FontIcon>}/>
-                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Administração"
+                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Documentos"
                               leftIcon={<FontIcon style={styleWhite}
                                                   className="material-icons">account_balance</FontIcon>}/>
                 </List>

@@ -9,7 +9,7 @@ class AnnounceCard extends Component {
         const {announcement} = this.props;
         let subtitle = "Postado em " + announcement.date;
         return (
-            <Card style={{margin: 15}}>
+            <Card style={(this.props.modal) ? {} : {margin: 15}}>
                 <CardHeader titleColor={deepOrangeA400} titleStyle={{fontWeight: "bold"}} title={announcement.title}
                     subtitle={subtitle} subtitleStyle={{fontSize: 12}}
                 />
@@ -22,7 +22,8 @@ class AnnounceCard extends Component {
 }
 
 AnnounceCard.propTypes = {
-    announcement: PropTypes.object.isRequired
+    announcement: PropTypes.object.isRequired,
+    modal: PropTypes.bool.isRequired
 };
 
 export default AnnounceCard
