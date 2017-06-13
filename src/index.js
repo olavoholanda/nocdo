@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import React from 'react'
+import {render} from 'react-dom'
+import Routes from './components/utils/Routes'
+import registerServiceWorker from './registerServiceWorker'
 import './index.css';
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -11,5 +11,5 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+render(<Routes />, document.getElementById('root'));
 registerServiceWorker();
