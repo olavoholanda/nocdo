@@ -1,23 +1,18 @@
 import React, {Component} from 'react'
-import {Card, CardHeader, CardTitle, CardText} from 'material-ui/Card';
+import {Card, CardHeader, CardText} from 'material-ui/Card';
 import PropTypes from 'prop-types';
+import {deepOrangeA400} from "material-ui/styles/colors";
 
 class AnnounceCard extends Component {
 
-    static propTypes = {
-        announcement: PropTypes.object.isRequired
-    };
-
     render() {
         const {announcement} = this.props
+        let subtitle = "Postado em " + announcement.date
         return (
             <Card style={{margin: 15}}>
-                <CardHeader
-                    title={announcement.user.name}
-                    subtitle={announcement.user.roleName}
-                    avatar={announcement.user.avatarUrl}
+                <CardHeader titleColor={deepOrangeA400} titleStyle={{fontWeight: "bold"}} title={announcement.title}
+                    subtitle={subtitle} subtitleStyle={{fontSize: 12}}
                 />
-                <CardTitle title={announcement.title} subtitle="Aviso" />
                 <CardText>
                     {announcement.text}
                 </CardText>
@@ -27,7 +22,7 @@ class AnnounceCard extends Component {
 }
 
 AnnounceCard.propTypes = {
-    announcement: PropTypes.object
+    announcement: PropTypes.object.isRequired
 }
 
 export default AnnounceCard
