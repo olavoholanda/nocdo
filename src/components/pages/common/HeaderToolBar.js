@@ -1,21 +1,23 @@
-import React from "react";
-import IconMenu from "material-ui/IconMenu";
-import IconButton from "material-ui/IconButton";
-import FontIcon from "material-ui/FontIcon";
-import MenuItem from "material-ui/MenuItem";
-import Divider from "material-ui/Divider";
-import FlatButton from "material-ui/FlatButton";
-import {List, ListItem} from "material-ui/List";
-import {Toolbar, ToolbarGroup} from "material-ui/Toolbar";
-import {darkBlack, lightBlack} from "material-ui/styles/colors";
-import Subheader from "material-ui/Subheader";
-import Avatar from "material-ui/Avatar";
-import Popover from "material-ui/Popover";
+import React from 'react'
+import IconMenu from 'material-ui/IconMenu'
+import IconButton from 'material-ui/IconButton'
+import FontIcon from 'material-ui/FontIcon'
+import MenuItem from 'material-ui/MenuItem'
+import Divider from 'material-ui/Divider'
+import FlatButton from 'material-ui/FlatButton'
+import {List, ListItem} from 'material-ui/List'
+import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar'
+import {darkBlack, lightBlack} from 'material-ui/styles/colors'
+import Subheader from 'material-ui/Subheader'
+import Avatar from 'material-ui/Avatar'
+import Popover from 'material-ui/Popover'
+import PropTypes from 'prop-types'
+import Badge from 'material-ui/Badge'
 
 var labelStyle = {
     textTransform: "capitalize",
     fontSize: 16
-}
+};
 
 class HeaderToolBar extends React.Component {
 
@@ -50,15 +52,21 @@ class HeaderToolBar extends React.Component {
                 <ToolbarGroup firstChild={true}>
                     {/*disable this icon and put an screent title icon*/}
                     <FlatButton
-                        label="Feed"
+                        label={this.props.title}
                         labelStyle={labelStyle}
-                        icon={<FontIcon className="material-icons">rss_feed</FontIcon>}
+                        icon={<FontIcon className="material-icons">{this.props.icon}</FontIcon>}
                     />
                 </ToolbarGroup>
                 <ToolbarGroup>
-                    <IconButton touch={true} onTouchTap={this.handleTouchTap}>
-                        <FontIcon className="material-icons">notifications</FontIcon>
-                    </IconButton>
+                        <Badge
+                            badgeContent={14}
+                            primary={true}
+                            badgeStyle={{top: 23, right: 23}}
+                        >
+                            <IconButton touch={true} onTouchTap={this.handleTouchTap}>
+                                <FontIcon className="material-icons">notifications</FontIcon>
+                            </IconButton>
+                        </Badge>
                     <Popover
                         open={this.state.open}
                         anchorEl={this.state.anchorEl}
@@ -152,6 +160,11 @@ class HeaderToolBar extends React.Component {
             </Toolbar>
         );
     }
+}
+
+HeaderToolBar.propTypes = {
+    title: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired
 }
 
 export default HeaderToolBar;
