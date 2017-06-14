@@ -11,31 +11,13 @@ import AnnounceCard from "./AnnounceCard";
 let customContentStyle = {
     width: '50%'
 };
-
-class CollapsedListAnnounces extends React.Component {
-
-    state = {
-        open: false,
-        item: undefined
-    };
-
-    handleOpen = (item) => {
-        this.setState({open: true, item: item});
-    };
-
-    handleClose = () => {
-        this.setState({open: false, item: undefined});
-    };
+/*
+ TODO - Change this view to a list with inline expandable of the card, not a modal one,
+ because the actions of new/edit we are using modal
+ */
+class AnnounceListCollapsed extends React.Component {
 
     render() {
-
-        const actions = [
-            <FlatButton
-                label="Fechar"
-                primary={true}
-                onTouchTap={this.handleClose}
-            />,
-        ];
 
         let list = data.map(function(a) {
             return (
@@ -43,7 +25,6 @@ class CollapsedListAnnounces extends React.Component {
                     <ListItem
                     key={a.id}
                     primaryText={a.title}
-                    onTouchTap={() => this.handleOpen(a)}
                     secondaryText={
                         <p>
                             <span style={{color: deepOrangeA400}}>{a.date}</span>:&nbsp;
@@ -62,19 +43,9 @@ class CollapsedListAnnounces extends React.Component {
                 <List>
                     {list}
                 </List>
-                <Dialog
-                    modal={false}
-                    actions={actions}
-                    contentStyle={customContentStyle}
-                    open={this.state.open}
-                    bodyStyle={{padding: 0}}
-                    onRequestClose={this.handleClose}
-                >
-                    <AnnounceCard announcement={this.state.item} modal={true}/>
-                </Dialog>
             </Paper>
         );
     }
 }
 
-export default CollapsedListAnnounces;
+export default AnnounceListCollapsed;

@@ -5,7 +5,7 @@ import {Toolbar, ToolbarGroup, ToolbarSeparator} from 'material-ui/Toolbar'
 import {grey700} from 'material-ui/styles/colors'
 import RaisedButton from 'material-ui/RaisedButton'
 import TextField from 'material-ui/TextField'
-import NewAnnounceDialog from './NewAnnounceDialog'
+import AnnounceDialog from './AnnounceDialog'
 
 let style = {
     backgroundColor: "#eeeeee"
@@ -42,7 +42,7 @@ class AnnounceToolBar extends React.Component {
                         <RaisedButton label="Novo Aviso" secondary={true} onTouchTap={() => this.handleOpen()}/>
                     </ToolbarGroup>
                 </Toolbar>
-                <NewAnnounceDialog open={this.state.open} handler={this.handleClose}/>
+                <AnnounceDialog open={this.state.open} handler={this.handleClose}/>
             </div>
         );
     }

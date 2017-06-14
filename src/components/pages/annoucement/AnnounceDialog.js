@@ -10,11 +10,30 @@ const customContentStyle = {
     maxWidth: 'none'
 };
 
-class NewAnnounceDialog extends React.Component {
+class AnnounceDialog extends React.Component {
 
-    state = {
-        title: '',
-        text: ''
+    constructor(props) {
+        super(props);
+
+        if(this.props.data !== undefined){
+            this.state = {
+                title: this.props.data.title,
+                text: this.props.data.text
+            };
+        } else {
+            this.state = {
+                title: '',
+                text: ''
+            };
+        }
+
+
+    }
+
+    handleClose = (e) => {
+        e.preventDefault();
+        this.setState({title: '', text: '', data: undefined});
+        this.props.handler();
     };
 
     handleTitleChange = (e, newValue) => {
@@ -35,8 +54,14 @@ class NewAnnounceDialog extends React.Component {
             return;
         }
         // TODO: send request to the server
-        console.log('Title: ' + title + " - Text: " + text);
-        this.setState({title: '', text: ''});
+        if(this.props.data !== undefined){
+            //creating a new announce
+            console.log('creating announce');
+        } else {
+            //updating an existing one
+            console.log('updating announce');
+        }
+        this.setState({title: '', text: '', data: undefined});
         this.props.handler();
     };
 
@@ -44,11 +69,11 @@ class NewAnnounceDialog extends React.Component {
         return (
             <div>
                 <Dialog
-                    title={<HeaderDialog title="Novo Aviso" icon="announcement" handler={this.props.handler}/>}
+                    title={<HeaderDialog title="Novo Aviso" icon="announcement" handler={this.handleClose}/>}
                     modal={false}
                     contentStyle={customContentStyle}
                     open={this.props.open}
-                    onRequestClose={this.props.handler}
+                    onRequestClose={this.handleClose}
                     autoScrollBodyContent={true}
                 >
                     <form onSubmit={this.handleSubmit}>
@@ -58,6 +83,7 @@ class NewAnnounceDialog extends React.Component {
                             value={this.state.title}
                             onChange={this.handleTitleChange}
                             fullWidth={true}
+                            required
                         /><br />
                         <TextField
                             floatingLabelText="Aviso: "
@@ -67,10 +93,11 @@ class NewAnnounceDialog extends React.Component {
                             fullWidth={true}
                             multiLine={true}
                             rows={5}
+                            required
                         /><br />
                         <RaisedButton
                             style={{float: 'right'}}
-                            label="Criar"
+                            label="Salvar"
                             type="submit"
                             value="Post"
                             primary={true}
@@ -82,9 +109,10 @@ class NewAnnounceDialog extends React.Component {
     }
 }
 
-NewAnnounceDialog.propTypes = {
+AnnounceDialog.propTypes = {
     open: PropTypes.bool.isRequired,
-    handler: PropTypes.func.isRequired
+    handler: PropTypes.func.isRequired,
+    data: PropTypes.object
 };
 
-export default NewAnnounceDialog;
+export default AnnounceDialog;

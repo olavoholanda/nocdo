@@ -2,7 +2,7 @@ import React from 'react'
 import AnnounceCard from './AnnounceCard'
 import data from './sample_data.json'
 
-class ExpandedListAnnounces extends React.Component {
+class AnnounceListExpanded extends React.Component {
     render() {
 
         let list = data.map(function(a) {
@@ -19,4 +19,4 @@ class ExpandedListAnnounces extends React.Component {
     }
 }
 
-export default ExpandedListAnnounces;
+export default AnnounceListExpanded;

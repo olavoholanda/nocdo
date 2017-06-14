@@ -27,7 +27,7 @@ class HeaderDialog extends React.Component {
                     onTouchTap={this.props.handler}
                     style={{float: 'right', padding: 0, height: 34, width: 34}}
                     iconStyle={{color: white}}
-                    tooltip="Fechar">
+                >
                     <FontIcon className="material-icons">close</FontIcon>
                 </IconButton>
             </div>
