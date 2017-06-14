@@ -15,19 +15,19 @@ class AnnounceDialog extends React.Component {
     constructor(props) {
         super(props);
 
-        if(this.props.data !== undefined){
+        if(this.props.data === undefined){
             this.state = {
-                title: this.props.data.title,
-                text: this.props.data.text
+                title: '',
+                text: '',
+                data: undefined
             };
         } else {
             this.state = {
-                title: '',
-                text: ''
+                title: this.props.data.title,
+                text: this.props.data.text,
+                data: this.props.data
             };
         }
-
-
     }
 
     handleClose = (e) => {
@@ -54,11 +54,11 @@ class AnnounceDialog extends React.Component {
             return;
         }
         // TODO: send request to the server
-        if(this.props.data !== undefined){
-            //creating a new announce
+        if(this.props.data === undefined){
+            //updating an existing one
             console.log('creating announce');
         } else {
-            //updating an existing one
+            //creating a new announce
             console.log('updating announce');
         }
         this.setState({title: '', text: '', data: undefined});

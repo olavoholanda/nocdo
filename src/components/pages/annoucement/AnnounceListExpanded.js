@@ -7,7 +7,7 @@ class AnnounceListExpanded extends React.Component {
 
         let list = data.map(function(a) {
             return (
-                <AnnounceCard key={a.id} announcement={a} modal={false}/>
+                <AnnounceCard key={a.id} announcement={a}/>
             );
         });
 

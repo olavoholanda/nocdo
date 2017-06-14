@@ -1,9 +1,8 @@
 import React from "react";
 import AnnounceListExpanded from "./AnnounceListExpanded";
-import {Toolbar, ToolbarGroup, ToolbarSeparator} from "material-ui/Toolbar";
+import {Toolbar, ToolbarGroup} from "material-ui/Toolbar";
 import IconButton from "material-ui/IconButton";
 import FontIcon from "material-ui/FontIcon";
-import RaisedButton from "material-ui/RaisedButton";
 import TextField from "material-ui/TextField";
 import {grey700} from "material-ui/styles/colors";
 
@@ -27,15 +26,13 @@ class CustomToolBar extends React.Component {
                 <ToolbarGroup>
                     <TextField hintText="Buscar"/>
                     <FontIcon className="material-icons">search</FontIcon>
-                    <ToolbarSeparator/>
-                    <RaisedButton label="Novo Aviso" secondary={true} onTouchTap={this.props.handler}/>
                 </ToolbarGroup>
             </Toolbar>
         );
     }
 }
 
-class ViewAnnounceAdmin extends React.Component {
+class ViewAnnounce extends React.Component {
 
     render() {
         return (
@@ -47,4 +44,4 @@ class ViewAnnounceAdmin extends React.Component {
     }
 }
 
-export default ViewAnnounceAdmin;
+export default ViewAnnounce;

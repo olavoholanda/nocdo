@@ -1,16 +1,10 @@
-import React from 'react'
-import data from './sample_data.json'
-import {List, ListItem} from 'material-ui/List'
-import Divider from 'material-ui/Divider'
-import {deepOrangeA400} from 'material-ui/styles/colors'
-import Paper from 'material-ui/Paper'
-import Dialog from 'material-ui/Dialog'
-import FlatButton from 'material-ui/FlatButton'
-import AnnounceCard from "./AnnounceCard";
+import React from "react";
+import data from "./sample_data.json";
+import {List, ListItem} from "material-ui/List";
+import Divider from "material-ui/Divider";
+import {deepOrangeA400} from "material-ui/styles/colors";
+import Paper from "material-ui/Paper";
 
-let customContentStyle = {
-    width: '50%'
-};
 /*
  TODO - Change this view to a list with inline expandable of the card, not a modal one,
  because the actions of new/edit we are using modal
