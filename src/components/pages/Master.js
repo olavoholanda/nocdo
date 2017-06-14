@@ -1,10 +1,8 @@
-import React from 'react'
-import NavDrawer from './common/NavDrawer'
-import HeaderToolBar from './common/HeaderToolBar'
-import Subheader from 'material-ui/Subheader'
-import ExpandedListAnnounces from './annoucement/ExpandedListAnnounces'
-import CollapsedListAnnounces from './annoucement/CollapsedListAnnounces'
-import AnnounceToolBar from './annoucement/AnnounceToolBar'
+import React from "react";
+import NavDrawer from "./common/NavDrawer";
+import HeaderToolBar from "./common/HeaderToolBar";
+import ExpandedListAnnounces from "./annoucement/ExpandedListAnnounces";
+import AnnounceToolBar from "./annoucement/AnnounceToolBar";
 
 let styleContent = {
     paddingLeft: 255
