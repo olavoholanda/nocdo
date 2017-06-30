@@ -9,7 +9,7 @@ import Drawer from "material-ui/Drawer";
 import Divider from "material-ui/Divider";
 import Avatar from "material-ui/Avatar";
 import {blueGrey900, blueGrey400, deepOrangeA400, white} from "material-ui/styles/colors";
-import logo from '../../../logo.svg';
+import logo from '../../logo.svg';
 
 var styleDrawer = {
     backgroundColor: blueGrey900
@@ -76,34 +76,23 @@ class NavDrawer extends React.Component {
                 </div>
                 <Divider style={styleDivider}/>
                 <List>
-                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Início"
+                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Início" href="/home"
                               leftIcon={<FontIcon style={styleWhite} className="material-icons">home</FontIcon>}/>
-                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Avisos"
+                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Avisos" href="/announce"
                               leftIcon={<FontIcon style={styleWhite}
                                                   className="material-icons">announcement</FontIcon>}/>
-                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Enquetes"
+                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Enquetes" href="/pool"
                               leftIcon={<FontIcon style={styleWhite} className="material-icons">view_list</FontIcon>}/>
-                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Forum"
+                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Forum" href="/forum"
                               leftIcon={<FontIcon style={styleWhite} className="material-icons">forum</FontIcon>}/>
-                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Portaria"
-                              leftIcon={<FontIcon style={styleWhite} className="material-icons">store</FontIcon>}
-                              // nestedItems={[
-                              //     <ListItem hoverColor={deepOrangeA400} style={styleWhite} key={1} primaryText="Visitas"
-                              //               leftIcon={<FontIcon style={styleWhite} className="material-icons">assignment_turned_in</FontIcon>}/>,
-                              //     <ListItem hoverColor={deepOrangeA400} style={styleWhite} key={2}
-                              //               primaryText="Encomendas"
-                              //               leftIcon={<FontIcon style={styleWhite} className="material-icons">assignment_returned</FontIcon>}/>,
-                              //     <ListItem hoverColor={deepOrangeA400} style={styleWhite} key={3}
-                              //               primaryText="Porteiros"
-                              //               leftIcon={<FontIcon style={styleWhite} className="material-icons">assignment_ind</FontIcon>}/>,
-                              // ]}
-                    />
-                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Reservas"
+                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Portaria" href="/lobby"
+                              leftIcon={<FontIcon style={styleWhite} className="material-icons">store</FontIcon>}/>
+                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Reservas" href="/reservations"
                               leftIcon={<FontIcon style={styleWhite} className="material-icons">event</FontIcon>}/>
-                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Colaboradores"
+                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Colaboradores" href="/collaborators"
                               leftIcon={<FontIcon style={styleWhite}
                                                   className="material-icons">recent_actors</FontIcon>}/>
-                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Documentos"
+                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Documentos" href="/documents"
                               leftIcon={<FontIcon style={styleWhite}
                                                   className="material-icons">account_balance</FontIcon>}/>
                 </List>

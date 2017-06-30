@@ -3,7 +3,7 @@ import Dialog from "material-ui/Dialog";
 import RaisedButton from "material-ui/RaisedButton";
 import TextField from "material-ui/TextField";
 import PropTypes from "prop-types";
-import HeaderDialog from "../common/HeaderDialog";
+import HeaderDialog from "../../common/HeaderDialog";
 
 const customContentStyle = {
     width: '80%',
