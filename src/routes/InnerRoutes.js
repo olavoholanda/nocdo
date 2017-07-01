@@ -1,5 +1,5 @@
-import React from 'react'
-import {Route} from 'react-router-dom'
+import React from "react";
+import {Route} from "react-router-dom";
 import HomeView from "../views/HomeView";
 import AnnounceView from "../views/AnnounceView";
 import ForumView from "../views/ForumView";
