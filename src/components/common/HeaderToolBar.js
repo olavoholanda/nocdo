@@ -56,6 +56,7 @@ class HeaderToolBar extends React.Component {
                 <ToolbarGroup firstChild={true}>
                     {/*disable this icon and put an screent title icon*/}
                     <FlatButton
+                        href={this.props.link}
                         label={this.props.title}
                         labelStyle={labelStyle}
                         icon={<FontIcon className="material-icons">{this.props.icon}</FontIcon>}
@@ -168,6 +169,7 @@ class HeaderToolBar extends React.Component {
 
 HeaderToolBar.propTypes = {
     title: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
     icon: PropTypes.string.isRequired
 }
 
