@@ -11,6 +11,7 @@ import injectTapEventPlugin from "react-tap-event-plugin";
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
 
+localStorage.setItem("role", "ROLE_MANAGER");
 
 class App extends React.Component {
     render() {
