@@ -1,57 +1,53 @@
-/* TODO: - Div of the avatar and personal operates like a button and links to the profile page
-         - Move all styles to the appropriate .css
-*/
-
 import React from "react";
 import FontIcon from "material-ui/FontIcon";
 import {List, ListItem} from "material-ui/List";
 import Drawer from "material-ui/Drawer";
 import Divider from "material-ui/Divider";
 import Avatar from "material-ui/Avatar";
-import {blueGrey900, blueGrey400, deepOrangeA400, white} from "material-ui/styles/colors";
-import logo from '../../logo.svg';
+import {blueGrey400, blueGrey900, deepOrangeA400, white} from "material-ui/styles/colors";
+import logo from "../../logo.svg";
 
-var styleDrawer = {
+const styleDrawer = {
     backgroundColor: blueGrey900
-}
+};
 
-var styleDivLogo = {
+const styleDivLogo = {
     height: 56,
     textAlign: "center",
-}
+};
 
-var styleLogo = {
+const styleLogo = {
     height: 30,
     marginTop: 8
-}
+};
 
-var styleWhite = {
+const styleWhite = {
     color: white
-}
+};
 
-var styleAvatar = {
+const styleAvatar = {
     margin: 20,
     float: "left"
-}
+};
 
-var stylePersonalInfo = {
+const stylePersonalInfo = {
     color: white,
     fontSize: 15,
     fontWeight: "bold",
     paddingTop: 33
-}
+};
 
-var styleRole = {
+const styleRole = {
     color: deepOrangeA400,
     fontSize: 13,
     fontWeight: "normal",
     fontStyle: "italic"
-}
+};
 
-var styleDivider = {
+const styleDivider = {
     backgroundColor: blueGrey400,
     width: "90%"
-}
+};
 
 class NavDrawer extends React.Component {
 
@@ -59,7 +55,7 @@ class NavDrawer extends React.Component {
         return (
             <Drawer open={true} zDepth={1} containerStyle={styleDrawer}>
                 <div style={styleDivLogo}>
-                    <img src={logo} style={styleLogo} alt="logo" />
+                    <img src={logo} style={styleLogo} alt="logo"/>
                 </div>
                 <Divider style={styleDivider}/>
                 <div>
@@ -81,15 +77,16 @@ class NavDrawer extends React.Component {
                     <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Avisos" href="/announce"
                               leftIcon={<FontIcon style={styleWhite}
                                                   className="material-icons">announcement</FontIcon>}/>
-                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Enquetes" href="/pool"
-                              leftIcon={<FontIcon style={styleWhite} className="material-icons">view_list</FontIcon>}/>
+                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Enquetes" href="/poll"
+                              leftIcon={<FontIcon style={styleWhite} className="material-icons">poll</FontIcon>}/>
                     <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Forum" href="/forum"
                               leftIcon={<FontIcon style={styleWhite} className="material-icons">forum</FontIcon>}/>
                     <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Portaria" href="/lobby"
                               leftIcon={<FontIcon style={styleWhite} className="material-icons">store</FontIcon>}/>
                     <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Reservas" href="/reservations"
                               leftIcon={<FontIcon style={styleWhite} className="material-icons">event</FontIcon>}/>
-                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Colaboradores" href="/collaborators"
+                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Colaboradores"
+                              href="/collaborators"
                               leftIcon={<FontIcon style={styleWhite}
                                                   className="material-icons">recent_actors</FontIcon>}/>
                     <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Documentos" href="/documents"

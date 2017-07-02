@@ -1,25 +1,25 @@
-import React from 'react'
-import IconMenu from 'material-ui/IconMenu'
-import IconButton from 'material-ui/IconButton'
-import FontIcon from 'material-ui/FontIcon'
-import MenuItem from 'material-ui/MenuItem'
-import Divider from 'material-ui/Divider'
-import FlatButton from 'material-ui/FlatButton'
-import {List, ListItem} from 'material-ui/List'
-import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar'
-import {darkBlack, lightBlack, grey400} from 'material-ui/styles/colors'
-import Subheader from 'material-ui/Subheader'
-import Avatar from 'material-ui/Avatar'
-import Popover from 'material-ui/Popover'
-import PropTypes from 'prop-types'
-import Badge from 'material-ui/Badge'
+import React from "react";
+import IconMenu from "material-ui/IconMenu";
+import IconButton from "material-ui/IconButton";
+import FontIcon from "material-ui/FontIcon";
+import MenuItem from "material-ui/MenuItem";
+import Divider from "material-ui/Divider";
+import FlatButton from "material-ui/FlatButton";
+import {List, ListItem} from "material-ui/List";
+import {Toolbar, ToolbarGroup} from "material-ui/Toolbar";
+import {darkBlack, grey400, lightBlack} from "material-ui/styles/colors";
+import Subheader from "material-ui/Subheader";
+import Avatar from "material-ui/Avatar";
+import Popover from "material-ui/Popover";
+import PropTypes from "prop-types";
+import Badge from "material-ui/Badge";
 
-var labelStyle = {
+const labelStyle = {
     textTransform: "capitalize",
     fontSize: 16
 };
 
-let style = {
+const style = {
     backgroundColor: grey400
 };
 
@@ -63,15 +63,15 @@ class HeaderToolBar extends React.Component {
                     />
                 </ToolbarGroup>
                 <ToolbarGroup>
-                        <Badge
-                            badgeContent={14}
-                            primary={true}
-                            badgeStyle={{top: 23, right: 23}}
-                        >
-                            <IconButton touch={true} onTouchTap={this.handleTouchTap}>
-                                <FontIcon className="material-icons">notifications</FontIcon>
-                            </IconButton>
-                        </Badge>
+                    <Badge
+                        badgeContent={14}
+                        primary={true}
+                        badgeStyle={{top: 23, right: 23}}
+                    >
+                        <IconButton touch={true} onTouchTap={this.handleTouchTap}>
+                            <FontIcon className="material-icons">notifications</FontIcon>
+                        </IconButton>
+                    </Badge>
                     <Popover
                         open={this.state.open}
                         anchorEl={this.state.anchorEl}
@@ -82,19 +82,20 @@ class HeaderToolBar extends React.Component {
                         <List>
                             <Subheader>Today</Subheader>
                             <ListItem
-                                leftAvatar={<Avatar src="http://lorempixel.com/200/200/people" />}
+                                leftAvatar={<Avatar src="http://lorempixel.com/200/200/people"/>}
                                 primaryText="Brunch this weekend?"
                                 secondaryText={
                                     <p>
                                         <span style={{color: darkBlack}}>Brendan Lim</span> --
-                                        I&apos;ll be in your neighborhood doing errands this weekend. Do you want to grab brunch?
+                                        I&apos;ll be in your neighborhood doing errands this weekend. Do you want to
+                                        grab brunch?
                                     </p>
                                 }
                                 secondaryTextLines={2}
                             />
-                            <Divider inset={true} />
+                            <Divider inset={true}/>
                             <ListItem
-                                leftAvatar={<Avatar src="http://lorempixel.com/200/200/people" />}
+                                leftAvatar={<Avatar src="http://lorempixel.com/200/200/people"/>}
                                 primaryText={
                                     <p>Summer BBQ&nbsp;&nbsp;<span style={{color: lightBlack}}>4</span></p>
                                 }
@@ -106,9 +107,9 @@ class HeaderToolBar extends React.Component {
                                 }
                                 secondaryTextLines={2}
                             />
-                            <Divider inset={true} />
+                            <Divider inset={true}/>
                             <ListItem
-                                leftAvatar={<Avatar src="http://lorempixel.com/200/200/people" />}
+                                leftAvatar={<Avatar src="http://lorempixel.com/200/200/people"/>}
                                 primaryText="Oui oui"
                                 secondaryText={
                                     <p>
@@ -118,9 +119,9 @@ class HeaderToolBar extends React.Component {
                                 }
                                 secondaryTextLines={2}
                             />
-                            <Divider inset={true} />
+                            <Divider inset={true}/>
                             <ListItem
-                                leftAvatar={<Avatar src="http://lorempixel.com/200/200/people" />}
+                                leftAvatar={<Avatar src="http://lorempixel.com/200/200/people"/>}
                                 primaryText="Birdthday gift"
                                 secondaryText={
                                     <p>
@@ -130,9 +131,9 @@ class HeaderToolBar extends React.Component {
                                 }
                                 secondaryTextLines={2}
                             />
-                            <Divider inset={true} />
+                            <Divider inset={true}/>
                             <ListItem
-                                leftAvatar={<Avatar src="http://lorempixel.com/200/200/people" />}
+                                leftAvatar={<Avatar src="http://lorempixel.com/200/200/people"/>}
                                 primaryText="Recipe to try"
                                 secondaryText={
                                     <p>
@@ -169,8 +170,8 @@ class HeaderToolBar extends React.Component {
 
 HeaderToolBar.propTypes = {
     title: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
+    link: PropTypes.string,
     icon: PropTypes.string.isRequired
-}
+};
 
 export default HeaderToolBar;
