@@ -1,20 +1,14 @@
-import React from 'react'
-import data from './topics_data.json'
-import fixedData from './fixed_topics_data.json'
+import React from "react";
+import data from "./topics_data.json";
+import fixedData from "./fixed_topics_data.json";
 import {Toolbar, ToolbarGroup, ToolbarSeparator} from "material-ui/Toolbar";
 import FontIcon from "material-ui/FontIcon";
 import RaisedButton from "material-ui/RaisedButton";
 import TextField from "material-ui/TextField";
 import {grey700} from "material-ui/styles/colors";
-import {List, ListItem} from 'material-ui/List';
-import Divider from 'material-ui/Divider';
-import Avatar from 'material-ui/Avatar';
-import {grey400, blueGrey900, deepOrangeA400} from 'material-ui/styles/colors';
-import IconButton from 'material-ui/IconButton';
-import Paper from 'material-ui/Paper';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import * as categories from "./categories";
-import Link from "../common/Link";
+import {List} from "material-ui/List";
+import Paper from "material-ui/Paper";
+import {Col, Grid, Row} from "react-flexbox-grid";
 import TopicListItem from "./TopicListItem";
 
 const style = {
