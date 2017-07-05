@@ -1,6 +1,6 @@
 import React from "react";
 import FontIcon from "material-ui/FontIcon";
-import {indigo900, deepOrangeA400} from "material-ui/styles/colors";
+import {indigo900, deepOrangeA400, blueGrey50} from "material-ui/styles/colors";
 import {Col, Row} from "react-flexbox-grid";
 import * as categories from "./categories";
 import Link from "../common/Link";
@@ -8,16 +8,23 @@ import PropTypes from "prop-types";
 import {ListItem} from "material-ui/List";
 
 class TopicListItem extends React.Component {
+
     render() {
         const topic = this.props.topic;
 
+        let stripe = {};
+
+        if(this.props.odd){
+            stripe = {backgroundColor: blueGrey50};
+        }
+
         return (
-        <ListItem>
+        <ListItem disabled style={stripe}>
             <Row key={topic.id} style={{paddingTop: 10}}>
                 <Col md={1} style={{textAlign: 'center'}}>{categories.management()}</Col>
-                <Col md={6}>
+                <Col md={7}>
                     <div>
-                        <Link color={indigo900} hoverColor={deepOrangeA400} text={topic.title} link="href"/>
+                        <Link color={indigo900} hoverColor={deepOrangeA400} text={topic.title} link="/forum/messages"/>
                     </div>
                     <div style={{fontSize: 12, paddingTop: 5, paddingBottom: 5}}>
                         por <Link color={indigo900} hoverColor={deepOrangeA400} text="Ryan Atwood" link="href"/>
@@ -32,10 +39,6 @@ class TopicListItem extends React.Component {
                         em {topic.date}
                     </div>
                 </Col>
-                <Col md={1}>
-                    <FontIcon style={{cursor: 'pointer'}} color={indigo900} hoverColor={deepOrangeA400}
-                              className="material-icons">visibility</FontIcon>
-                </Col>
             </Row>
         </ListItem>
         );
@@ -43,7 +46,8 @@ class TopicListItem extends React.Component {
 }
 
 TopicListItem.propTypes = {
-    topic: PropTypes.object
+    topic: PropTypes.object.required,
+    odd:  PropTypes.bool
 };
 
 export default TopicListItem;

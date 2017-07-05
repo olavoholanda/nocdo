@@ -36,17 +36,21 @@ const SubHeader = () => (
 
 const ListHeader = (props) => (
     <Row style={{marginTop: 15}}>
-        <Col md={7}>
+        <Col md={8}>
             <span style={topicHeader}>{props.title}</span>
         </Col>
         <Col md={2} style={{textAlign:'center'}}>
             <span style={topicHeader}>Respostas</span>
         </Col>
-        <Col md={3}>
+        <Col md={2}>
             <span style={topicHeader}>Última Mensagem</span>
         </Col>
     </Row>
 );
+
+function isOdd(n) {
+    return Math.abs(n % 2) === 1;
+}
 
 class TopicList extends React.Component {
     render() {
@@ -59,8 +63,8 @@ class TopicList extends React.Component {
                         <Col md={12}>
                             <Paper>
                                 <List>
-                                    {fixedData.map( (topic) => (
-                                        <TopicListItem key={topic.id} topic={topic}/>
+                                    {fixedData.map( (topic, index) => (
+                                        <TopicListItem key={topic.id} odd={isOdd(index)} topic={topic}/>
                                     ))}
                                 </List>
                             </Paper>
@@ -71,8 +75,8 @@ class TopicList extends React.Component {
                         <Col md={12}>
                             <Paper>
                                 <List>
-                                    {data.map( (topic) => (
-                                        <TopicListItem key={topic.id} topic={topic}/>
+                                    {data.map( (topic, index) => (
+                                        <TopicListItem key={topic.id} odd={isOdd(index)} topic={topic}/>
                                     ))}
                                 </List>
                             </Paper>
