@@ -34,6 +34,10 @@ const SubHeader = () => (
     </Toolbar>
 );
 
+function isOdd(n) {
+    return Math.abs(n % 2) === 1;
+}
+
 class MessageList extends React.Component {
 
     constructor(props) {
@@ -56,23 +60,23 @@ class MessageList extends React.Component {
                 <SubHeader/>
                 <DiscussionTitle/>
                 <List style={{margin: 15}}>
-                    <MessageListItem/>
+                    <MessageListItem odd={false}/>
                     <Divider/>
-                    <MessageListItem/>
+                    <MessageListItem odd={true}/>
                     <Divider/>
-                    <MessageListItem/>
+                    <MessageListItem odd={false}/>
                     <Divider/>
-                    <MessageListItem/>
+                    <MessageListItem odd={true}/>
                     <Divider/>
-                    <MessageListItem/>
+                    <MessageListItem odd={false}/>
                     <Divider/>
-                    <MessageListItem/>
+                    <MessageListItem odd={true}/>
                     <Divider/>
-                    <MessageListItem/>
+                    <MessageListItem odd={false}/>
                     <Divider/>
-                    <MessageListItem/>
+                    <MessageListItem odd={true}/>
                     <Divider/>
-                    <MessageListItem/>
+                    <MessageListItem odd={false}/>
                     { this.state.displayResponse ? <MessageAnswer /> : null }
                     <FloatingActionButton onClick={this.onClick} style={floatingStyle}>
                         <FontIcon className="material-icons">reply</FontIcon>
