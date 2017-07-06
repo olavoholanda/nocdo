@@ -16,10 +16,6 @@ class MessageAnswer extends React.Component {
         };
     }
 
-    componentDidMount(){
-        this.responseInput.focus();
-    }
-
     handleTextChange = (e, newValue) => {
         e.preventDefault();
         this.setState({text: newValue});

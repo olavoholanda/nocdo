@@ -9,18 +9,16 @@ import FloatingActionButton from "material-ui/FloatingActionButton";
 import MessageListItem from "./MessageListItem";
 import DiscussionTitle from "./DiscussionTitle";
 import MessageAnswer from "./MessageAnswer";
+import Scroll from "react-scroll";
 
 const style = {
     backgroundColor: "#eeeeee"
 };
 
 const floatingStyle = {
-    margin: 0,
-    top: 'auto',
-    right: 20,
-    bottom: 20,
-    left: 'auto',
-    position: 'fixed',
+    float:"right",
+    marginRight: 40,
+    marginTop: -12
 };
 
 const SubHeader = () => (
@@ -43,23 +41,22 @@ class MessageList extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            displayResponse: false,
-        };
-
         this.onClick = this.onClick.bind(this);
     }
 
     onClick() {
-        this.setState({displayResponse: true});
+        Scroll.animateScroll.scrollToBottom();
     }
 
     render() {
         return (
             <div>
                 <SubHeader/>
+                <FloatingActionButton onTouchTap={this.onClick} style={floatingStyle}>
+                    <FontIcon className="material-icons">reply</FontIcon>
+                </FloatingActionButton>
                 <DiscussionTitle/>
-                <List style={{margin: 15}}>
+                <List style={{margin: "8px 15px 15px 15px"}}>
                     <MessageListItem odd={false}/>
                     <Divider/>
                     <MessageListItem odd={true}/>
@@ -77,10 +74,7 @@ class MessageList extends React.Component {
                     <MessageListItem odd={true}/>
                     <Divider/>
                     <MessageListItem odd={false}/>
-                    { this.state.displayResponse ? <MessageAnswer /> : null }
-                    <FloatingActionButton onClick={this.onClick} style={floatingStyle}>
-                        <FontIcon className="material-icons">reply</FontIcon>
-                    </FloatingActionButton>
+                    <MessageAnswer/>
                 </List>
             </div>
         );

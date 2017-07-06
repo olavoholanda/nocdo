@@ -9,7 +9,7 @@ let styleContent = {
 
 // CoreLayout is a pure function of its props, so we can
 // define it with a plain javascript function...
-function CoreLayout({children}) {
+function CoreLayout() {
     return (
         <div>
             {/*left nav bar with the menu application*/}

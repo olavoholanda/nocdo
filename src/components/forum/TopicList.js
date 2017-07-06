@@ -57,7 +57,7 @@ class TopicList extends React.Component {
         return (
             <div>
                 <SubHeader/>
-                <Grid fluid>
+                <Grid fluid style={{paddingLeft: 15, paddingRight: 15}}>
                     <ListHeader title="Tópicos Fixos:"/>
                     <Row style={{marginTop: 5}}>
                         <Col md={12}>
