@@ -46,7 +46,7 @@ class TopicListItem extends React.Component {
 }
 
 TopicListItem.propTypes = {
-    topic: PropTypes.object.required,
+    topic: PropTypes.object.isRequired,
     odd:  PropTypes.bool
 };
 
