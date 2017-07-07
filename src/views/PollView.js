@@ -1,5 +1,7 @@
 import React from "react";
 import HeaderToolBar from "../components/common/HeaderToolBar";
+import PollList from "../components/poll/PollList";
+import {Route, Redirect, Switch} from "react-router-dom";
 
 class ForumView extends React.Component {
 
@@ -7,8 +9,11 @@ class ForumView extends React.Component {
 
         return (
             <div>
-                <HeaderToolBar title="Enquetes" icon="view_list"/>
-                <h3>Pool View</h3>
+                <HeaderToolBar link="/poll" title="Enquetes" icon="view_list"/>
+                <Switch>
+                    <Route exact path={"/poll/list"} component={PollList}/>
+                    <Redirect exact from="/poll" to="/poll/list"/>
+                </Switch>
             </div>
         );
     }

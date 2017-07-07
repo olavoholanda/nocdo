@@ -1,0 +1,160 @@
+[
+  {
+    "id": "4",
+    "title": "Vocês aprovam ou reprovam o projeto de asfaltar todas as ruas do condomínio?",
+    "options": [
+      {
+        "id": "16",
+        "option": "Aprovar",
+        "votes": "24",
+        "percentage": "75"
+      },
+      {
+        "id": "17",
+        "option": "Reprovar",
+        "votes": "8",
+        "percentage": "25"
+      }
+    ],
+    "closed": "false",
+    "startDate": "01/07/2017",
+    "endDate": "31/07/2017",
+    "totalVotes": "32",
+    "author": {
+      "name": "Sandy Cohen",
+      "username": "sandy"
+    }
+  },
+  {
+    "id": "3",
+    "title": "Qual banda você gostaria para o reveillon do condomínio?",
+    "options": [
+      {
+        "id": "12",
+        "option": "Affarra",
+        "votes": "8",
+        "percentage": "21"
+      },
+      {
+        "id": "13",
+        "option": "Xatrez",
+        "votes": "3",
+        "percentage": "7.9"
+      },
+      {
+        "id": "14",
+        "option": "L100",
+        "votes": "17",
+        "percentage": "44.7"
+      },
+      {
+        "id": "15",
+        "option": "Wado",
+        "votes": "10",
+        "percentage": "26.4"
+      }
+    ],
+    "closed": "false",
+    "startDate": "28/06/2017",
+    "endDate": "20/07/2017",
+    "totalVotes": "38",
+    "author": {
+      "name": "Sandy Cohen",
+      "username": "sandy"
+    }
+  },
+  {
+    "id": "2",
+    "title": "O que acharam do projeto da nova portaria?",
+    "options": [
+      {
+        "id": "6",
+        "option": "Ótimo",
+        "votes": "11",
+        "percentage": "50"
+      },
+      {
+        "id": "7",
+        "option": "Bom",
+        "votes": "7",
+        "percentage": "31.7"
+      },
+      {
+        "id": "8",
+        "option": "Regular",
+        "votes": "1",
+        "percentage": "4.5"
+      },
+      {
+        "id": "9",
+        "option": "Ruim",
+        "votes": "4",
+        "percentage": "18.1"
+      },
+      {
+        "id": "10",
+        "option": "Péssimo",
+        "votes": "2",
+        "percentage": "9"
+      },
+      {
+        "id": "11",
+        "option": "Não vi o projeto",
+        "votes": "7",
+        "percentage": "31.7"
+      }
+    ],
+    "closed": "false",
+    "startDate": "20/06/2017",
+    "endDate": "10/07/2017",
+    "totalVotes": "22",
+    "author": {
+      "name": "Caleb Nichol",
+      "username": "caleb"
+    }
+  },
+  {
+    "id": "1",
+    "title": "Melhor dia para reuniões mensais?",
+    "options": [
+      {
+        "id": "1",
+        "option": "5",
+        "votes": "11",
+        "percentage": "19.6"
+      },
+      {
+        "id": "2",
+        "option": "1",
+        "votes": "5",
+        "percentage": "9"
+      },
+      {
+        "id": "3",
+        "option": "2",
+        "votes": "14",
+        "percentage": "25"
+      },
+      {
+        "id": "4",
+        "option": "30",
+        "votes": "17",
+        "percentage": "30.4"
+      },
+      {
+        "id": "5",
+        "option": "15",
+        "votes": "9",
+        "percentage": "16"
+      }
+    ],
+    "closed": "true",
+    "startDate": "01/06/2017",
+    "endDate": "01/07/2017",
+    "totalVotes": "56",
+    "author": {
+      "name": "Ryan Atwood",
+      "username": "ryan"
+    }
+  }
+]
