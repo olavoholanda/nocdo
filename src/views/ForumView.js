@@ -11,7 +11,7 @@ class ForumView extends React.Component {
 
         return (
             <div>
-                <HeaderToolBar title="Fórum" icon="forum"/>
+                <HeaderToolBar link="/forum" title="Fórum" icon="forum"/>
                 <Switch>
                     <Route exact path={"/forum/topics"} component={TopicList}/>
                     <Route path={"/forum/topics/:page"} component={TopicList}/>
