@@ -1,6 +1,5 @@
 import React from "react";
-import FontIcon from "material-ui/FontIcon";
-import {indigo900, deepOrangeA400, blueGrey50} from "material-ui/styles/colors";
+import {blueGrey50, deepOrangeA400, indigo900} from "material-ui/styles/colors";
 import {Col, Row} from "react-flexbox-grid";
 import * as categories from "./categories";
 import Link from "../common/Link";
