@@ -49,6 +49,8 @@ class PollOptionListItem extends React.Component {
     render() {
         const option = this.props.option;
 
+        let percentage = option.percentage + "% (" + option.votes + ")";
+
         return (
             <ListItem primaryText={
                 <div>
@@ -57,7 +59,7 @@ class PollOptionListItem extends React.Component {
                     </div>
                     <div style={{float: "right", marginTop: -12, width: "50%"}}>
                         <div style={{float: "left", marginTop: -4}}>
-                            <span style={{fontSize: 12, fontWeight: "bold"}}>{option.percentage + "% " + "(" + option.votes + ")"}</span>
+                            <span style={{fontSize: 12, fontWeight: "bold"}}>{percentage}</span>
                         </div>
                         <div style={{float: "right", width: "80%", height: 12, backgroundColor: white, borderRadius: 5}}>
                             <div style={{width: option.percentage + "%", height: 12, backgroundColor: cyan800, borderRadius: 5}}/>

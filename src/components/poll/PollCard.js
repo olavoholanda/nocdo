@@ -2,12 +2,10 @@ import React from "react";
 import {blueGrey900, cyan500, deepOrangeA400, indigo900} from "material-ui/styles/colors";
 import Link from "../common/Link";
 import PropTypes from "prop-types";
-import {List} from "material-ui/List";
 import FontIcon from "material-ui/FontIcon";
 import Avatar from "material-ui/Avatar";
-import Divider from "material-ui/Divider";
-import PollOptionListItem from "./PollOptionListItem";
 import {Card, CardHeader, CardText} from "material-ui/Card";
+import OptionsList from "./OptionsList";
 
 class PollCard extends React.Component {
 
@@ -38,16 +36,9 @@ class PollCard extends React.Component {
                     showExpandableButton={true}
                 />
                 <CardText expandable={true}>
-                    <List>
-                        {poll.options.map( (option, index) => (
-                        <PollOptionListItem key={option.id}
-                                            option={option}
-                        />
-                        ))}
-                    </List>
+                    <OptionsList poll={poll}/>
                 </CardText>
             </Card>
-            <Divider/>
         </div>
         );
     }

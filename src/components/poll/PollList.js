@@ -30,9 +30,9 @@ class SubHeader extends React.Component {
             <Toolbar style={style}>
                 <ToolbarGroup firstChild={true}>
                     <DropDownMenu style={{color: grey700, fontSize: 14}} value={this.state.value} onChange={this.handleMenuChange}>
-                        <MenuItem value={1} primaryText="Enquetes Ativas" />
-                        <MenuItem value={2} primaryText="Enquetes Encerradas" />
-                        <MenuItem value={3} primaryText="Todas as Enquetes" />
+                        <MenuItem value={1} primaryText="Todas as Enquetes" />
+                        <MenuItem value={2} primaryText="Enquetes Ativas" />
+                        <MenuItem value={3} primaryText="Enquetes Encerradas" />
                     </DropDownMenu>
                 </ToolbarGroup>
                 <ToolbarGroup>
