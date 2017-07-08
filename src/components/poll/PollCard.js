@@ -21,8 +21,7 @@ class PollCard extends React.Component {
         }
 
         return (
-        <div>
-            <Card style={{marginTop: 15}} initiallyExpanded={true}>
+            <Card style={{marginBottom: 15}} initiallyExpanded={!closed}>
                 <CardHeader
                     title={<span style={{color: blueGrey900, fontWeight: "bold"}}>{poll.title}</span>}
                     subtitle={
@@ -39,7 +38,6 @@ class PollCard extends React.Component {
                     <OptionsList poll={poll}/>
                 </CardText>
             </Card>
-        </div>
         );
     }
 }
