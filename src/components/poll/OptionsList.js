@@ -64,7 +64,7 @@ class OptionsList extends React.Component {
                                 <span style={{fontSize: 12, fontWeight: "bold"}}>{option.option}</span>
                             </div>
                             <div style={{float: "right", marginTop: -12, width: "50%"}}>
-                                <div style={{float: "left", width: "85%", height: 12, backgroundColor: cyan100, borderRadius: 0}}>
+                                <div style={{float: "left", width: "80%", height: 12, backgroundColor: cyan100, borderRadius: 0}}>
                                     <div style={{width: option.percentage + "%", height: 12, backgroundColor: cyan500, borderRadius: 0}}/>
                                 </div>
                                 <div style={{float: "right", marginTop: -4}}>
