@@ -3,7 +3,6 @@ import {blueGrey100, cyan100, cyan500, white} from "material-ui/styles/colors";
 import PropTypes from "prop-types";
 import {List, ListItem, makeSelectable} from "material-ui/List";
 import FontIcon from "material-ui/FontIcon";
-import Avatar from "material-ui/Avatar";
 import RaisedButton from "material-ui/RaisedButton";
 import Subheader from "material-ui/Subheader";
 
