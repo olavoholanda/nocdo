@@ -32,10 +32,6 @@ const SubHeader = () => (
     </Toolbar>
 );
 
-function isOdd(n) {
-    return Math.abs(n % 2) === 1;
-}
-
 class MessageList extends React.Component {
 
     constructor(props) {
