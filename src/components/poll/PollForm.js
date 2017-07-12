@@ -83,7 +83,6 @@ class PollForm extends React.Component {
         if (this.props.match.params.id === undefined) {
             this.state = {
                 title: '',
-                optionsSize: 2,
                 options: [{option: ''}, {option: ''}],
                 startDate: new Date(),
                 endDate: undefined,
@@ -110,8 +109,8 @@ class PollForm extends React.Component {
                     }
                 ],
                 "closed": "false",
-                "startDate": "01/07/2017",
-                "endDate": "31/07/2017",
+                "startDate": "2017-07-01T18:25:43.511Z",
+                "endDate": "2017-07-30T18:25:43.511Z",
                 "totalVotes": "32",
                 "author": {
                     "name": "Sandy Cohen",
@@ -121,10 +120,9 @@ class PollForm extends React.Component {
 
             this.state = {
                 title: data.title,
-                optionsSize: data.options.length,
                 options: data.options,
-                startDate: data.startDate,
-                endDate: data.endDate,
+                startDate: new Date(data.startDate),
+                endDate: new Date(data.endDate),
                 edit: true,
                 data: data
             };

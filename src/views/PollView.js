@@ -14,6 +14,7 @@ class ForumView extends React.Component {
                 <Switch>
                     <Route exact path={"/poll/list"} component={PollList}/>
                     <Route exact path={"/poll/new"} component={PollForm}/>
+                    <Route exact path={"/poll/edit/:id"} component={PollForm}/>
                     <Redirect exact from="/poll" to="/poll/list"/>
                 </Switch>
             </div>
