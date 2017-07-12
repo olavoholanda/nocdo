@@ -15,6 +15,9 @@ const style = {
 
 const textColor = "rgba(0, 0, 0, 0.3)";
 
+const OPTIONS_LEGNTH_MAX = 10;
+const OPTIONS_LEGNTH_MIN = 2;
+
 let DateTimeFormat;
 
 /**
@@ -46,6 +49,31 @@ class SubHeader extends React.Component {
         );
     }
 }
+
+const DeleteOption = (props) => (
+    <Col md={1} style={{cursor: "pointer"}}
+         onClick={props.handlerClick}>
+        <div style={{marginTop: 37}}>
+            <FontIcon className="material-icons">delete</FontIcon>
+        </div>
+    </Col>
+);
+
+const AddOption = (props) => (
+    <Row>
+        <Col md={1}>
+            <div style={{textAlign: "right", marginTop: 37}}>
+                <FontIcon className="material-icons">radio_button_unchecked</FontIcon>
+            </div>
+        </Col>
+        <Col md={10} style={{cursor: "pointer", marginTop: 40, color: textColor, fontWeight: "bold"}}
+             onClick={props.handlerClick}>
+            <span >Adicionar Opção...</span>
+        </Col>
+        <Col md={1}/>
+    </Row>
+);
+
 
 class PollForm extends React.Component {
 
@@ -180,7 +208,17 @@ class PollForm extends React.Component {
                                     </Col>
                                 </Row>
                                 <Row>
-                                    <Col md={12}>
+                                    <Col md={6}>
+                                        <DatePicker
+                                            floatingLabelText="Data de ínicio da votação:"
+                                            floatingLabelFixed={true}
+                                            DateTimeFormat={DateTimeFormat}
+                                            locale="pt-BR"
+                                            value={this.state.startDate}
+                                            disabled
+                                        />
+                                    </Col>
+                                    <Col md={6}>
                                         <DatePicker
                                             floatingLabelText="Data de fim da votação:"
                                             floatingLabelFixed={true}
@@ -201,7 +239,7 @@ class PollForm extends React.Component {
                                     marginTop: 15,
                                 }}>
                                     <Col md={12}>
-                                        Opções:
+                                        Opções: (Máximo de {OPTIONS_LEGNTH_MAX} e Mínimo de {OPTIONS_LEGNTH_MIN})
                                     </Col>
                                 </Row>
                                 {this.state.options.map( (option, index) => (
@@ -221,25 +259,10 @@ class PollForm extends React.Component {
                                             required
                                         />
                                     </Col>
-                                    <Col md={1} style={{cursor: "pointer"}} onClick={()=>this.handleDiscardOption(index)}>
-                                        <div style={{marginTop: 37}}>
-                                            <FontIcon className="material-icons">delete</FontIcon>
-                                        </div>
-                                    </Col>
+                                    {this.state.options.length > OPTIONS_LEGNTH_MIN ? <DeleteOption handlerClick={() => this.handleDiscardOption(index)}/> : ''}
                                 </Row>
                                 ))}
-                                <Row>
-                                    <Col md={1}>
-                                        <div style={{textAlign: "right", marginTop: 37}}>
-                                            <FontIcon className="material-icons">radio_button_unchecked</FontIcon>
-                                        </div>
-                                    </Col>
-                                    <Col md={10} style={{cursor: "pointer", marginTop: 40, color: textColor, fontWeight: "bold"}}
-                                    onClick={this.handleAddOption}>
-                                        <span >Adicionar Opção...</span>
-                                    </Col>
-                                    <Col md={1}/>
-                                </Row>
+                                {this.state.options.length >= OPTIONS_LEGNTH_MAX ? '' : <AddOption handlerClick={this.handleAddOption}/>}
                                 <Row style={{marginTop: 50}}>
                                     <Col md={6}>
                                         <RaisedButton
