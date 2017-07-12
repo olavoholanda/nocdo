@@ -4,9 +4,18 @@ import PropTypes from "prop-types";
 import {List, ListItem, makeSelectable} from "material-ui/List";
 import FontIcon from "material-ui/FontIcon";
 import RaisedButton from "material-ui/RaisedButton";
+import IconButton from "material-ui/IconButton";
 import Subheader from "material-ui/Subheader";
 
 let SelectableList = makeSelectable(List);
+
+const styleAdminTools = {
+    float: 'right',
+    marginTop: -30,
+    padding: 0,
+    height: 34,
+    width: 34
+};
 
 function wrapState(ComposedComponent) {
     return class SelectableList extends React.Component {
@@ -32,6 +41,18 @@ function wrapState(ComposedComponent) {
         };
 
         render() {
+
+            let adminTools = (
+                <div>
+                    <IconButton style={styleAdminTools} tooltip="Remover" href="/poll">
+                        <FontIcon className="material-icons">delete</FontIcon>
+                    </IconButton>
+                    <IconButton style={styleAdminTools} tooltip="Editar" href={"/poll/edit/" + this.props.pollId}>
+                        <FontIcon className="material-icons">mode_edit</FontIcon>
+                    </IconButton>
+                </div>
+            );
+
             return (
                 <ComposedComponent
                     value={this.state.selectedIndex}
@@ -41,6 +62,7 @@ function wrapState(ComposedComponent) {
                     {this.props.children}
                     <div style={{textAlign: "center", marginTop: 10}}>
                         <RaisedButton onTouchTap={this.onSubmitVote} label="Votar"  disabled={this.state.selectedIndex===0} primary={true} />
+                        {adminTools}
                     </div>
                 </ComposedComponent>
             );
