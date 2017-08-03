@@ -1,0 +1,49 @@
+{
+    "dependencies": [
+        {
+            "img": "/images/parque_infantil.jpg",
+            "title": "Parque Infatil",
+            "price": "0",
+            "capacity": "15",
+            "weekDays": "Seg, Ter, Qua, Qui, Sex, Sáb, Dom",
+            "hours": "08h às 17h",
+            "restrictions": "Crianças com mais de 10 anos não são permitidas."
+        },
+        {
+            "img": "/images/salao.png",
+            "title": "Salão de Festas",
+            "price": "50,00",
+            "capacity": "75",
+            "weekDays": "Ter, Qua, Qui, Sex, Sáb",
+            "hours": "10h às 16h, 18h às 00h",
+            "restrictions": "Desligar o som a partir das 22 horas."
+        },
+        {
+            "img": "/images/quadra.jpg",
+            "title": "Quadra de Esportes",
+            "price": "0",
+            "capacity": "15",
+            "weekDays": "Seg, Ter, Qua, Qui, Sex, Sáb, Dom",
+            "hours": "10h às 22h",
+            "restrictions": "Não permitidas crianças com mais de 10 anos."
+        },
+        {
+            "img": "/images/piscina.jpg",
+            "title": "Piscina",
+            "price": "15,00",
+            "capacity": "15",
+            "weekDays": "Seg, Ter, Qua, Qui, Sex, Sáb, Dom",
+            "hours": "9h às 16h",
+            "restrictions": "Não é permitido o consumo de bebidas e comidas na piscina."
+        },
+        {
+            "img": "/images/churrasqueira.jpg",
+            "title": "Churrasqueira",
+            "price": "30,00",
+            "capacity": "20",
+            "weekDays": "Qui, Sex, Sáb, Dom",
+            "hours": "9h às 16h",
+            "restrictions": "Não há restrições."
+        }
+    ]
+}
