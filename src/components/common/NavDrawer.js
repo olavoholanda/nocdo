@@ -83,7 +83,7 @@ class NavDrawer extends React.Component {
                               leftIcon={<FontIcon style={styleWhite} className="material-icons">forum</FontIcon>}/>
                     <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Portaria" href="/lobby"
                               leftIcon={<FontIcon style={styleWhite} className="material-icons">store</FontIcon>}/>
-                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Reservas" href="/reservations"
+                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Reservas" href="/booking"
                               leftIcon={<FontIcon style={styleWhite} className="material-icons">event</FontIcon>}/>
                     <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Colaboradores"
                               href="/collaborators"

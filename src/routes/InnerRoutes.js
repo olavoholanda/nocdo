@@ -6,7 +6,7 @@ import ForumView from "../views/ForumView";
 import PollView from "../views/PollView";
 import LobbyView from "../views/LobbyView";
 import DocumentView from "../views/DocumentView";
-import ReservationView from "../views/ReservationView";
+import BookingView from "../views/BookingView";
 import CollaboratorView from "../views/CollaboratorView";
 
 class Routes extends React.Component {
@@ -19,7 +19,7 @@ class Routes extends React.Component {
                     <Route path="/poll" component={PollView}/>
                     <Route path="/forum" component={ForumView}/>
                     <Route path="/lobby" component={LobbyView}/>
-                    <Route path="/reservations" component={ReservationView}/>
+                    <Route path="/booking" component={BookingView}/>
                     <Route path="/collaborators" component={CollaboratorView}/>
                     <Route path="/documents" component={DocumentView}/>
                 </Switch>
