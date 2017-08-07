@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import {List, ListItem, makeSelectable} from "material-ui/List";
 import Avatar from "material-ui/Avatar";
-import Subheader from "material-ui/Subheader";
+import Paper from "material-ui/Paper";
+import ListSubHeader from "./ListSubHeader";
 
 let SelectableList = makeSelectable(List);
 
@@ -48,17 +49,25 @@ class DependenciesList extends React.Component {
     render() {
         const data = this.props.data;
         return (
-            <SelectableList defaultValue={0} handler={this.props.handler}>
-                {data.dependencies.map( (d, index) => (
-                    <ListItem
-                        key={index}
-                        value={index}
-                        rightAvatar={<Avatar src={d.img} size={45} />}
-                        primaryText={d.title}
-                        secondaryText={"Preço da Reserva: R$ " + d.price}
-                    />
-                ))}
-            </SelectableList>
+            <Paper style={{minHeight: 800}}>
+                <ListSubHeader
+                    title="Dependências do Condomínio:"
+                    tooltip="Nova Dependência"
+                    badge="add_circle"
+                    icon="business"
+                />
+                <SelectableList defaultValue={0} handler={this.props.handler}>
+                    {data.dependencies.map( (d, index) => (
+                        <ListItem
+                            key={index}
+                            value={index}
+                            rightAvatar={<Avatar src={d.img} size={45} />}
+                            primaryText={d.title}
+                            secondaryText={"Preço da Reserva: R$ " + d.price}
+                        />
+                    ))}
+                </SelectableList>
+            </Paper>
         );
     }
 }
