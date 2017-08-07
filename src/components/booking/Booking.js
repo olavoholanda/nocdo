@@ -33,10 +33,25 @@ const BookItem = (props) => (
     />
 );
 
-let d = dataDependency.dependencies[0];
-
 class Booking extends React.Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            selectedDependency: 0,
+        };
+    }
+
+    handleDependencyChange = (e, newValue) => {
+        e.preventDefault();
+        this.setState({selectedDependency: newValue});
+    };
+
     render() {
+
+        let d = dataDependency.dependencies[this.state.selectedDependency];
+
         return (
             <div>
                 <SubHeader/>
@@ -89,7 +104,7 @@ class Booking extends React.Component {
                                         </Badge>
                                     </ToolbarGroup>
                                 </Toolbar>
-                                <DependenciesList data={dataDependency}/>
+                                <DependenciesList handler={this.handleDependencyChange} data={dataDependency}/>
                             </Paper>
                         </Col>
                         <Col md={4}>

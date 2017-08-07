@@ -11,6 +11,7 @@ function wrapState(ComposedComponent) {
         static propTypes = {
             children: PropTypes.node.isRequired,
             defaultValue: PropTypes.number.isRequired,
+            handler: PropTypes.func.isRequired,
         };
 
         componentWillMount() {
@@ -23,6 +24,7 @@ function wrapState(ComposedComponent) {
             this.setState({
                 selectedIndex: index,
             });
+            this.props.handler(event, index);
         };
 
         render() {
@@ -46,7 +48,7 @@ class DependenciesList extends React.Component {
     render() {
         const data = this.props.data;
         return (
-            <SelectableList defaultValue={0}>
+            <SelectableList defaultValue={0} handler={this.props.handler}>
                 {data.dependencies.map( (d, index) => (
                     <ListItem
                         key={index}
@@ -63,6 +65,7 @@ class DependenciesList extends React.Component {
 
 DependenciesList.propTypes = {
     data: PropTypes.object.isRequired,
+    handler: PropTypes.func.isRequired,
 };
 
 export default DependenciesList;
