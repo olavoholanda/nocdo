@@ -3,8 +3,6 @@ import {Toolbar, ToolbarGroup} from "material-ui/Toolbar";
 import {deepOrange300, grey700} from "material-ui/styles/colors";
 import {Col, Grid, Row} from "react-flexbox-grid";
 import {List, ListItem} from 'material-ui/List';
-import Subheader from "material-ui/Subheader";
-import RaisedButton from "material-ui/RaisedButton";
 import Paper from "material-ui/Paper";
 import FontIcon from "material-ui/FontIcon";
 import IconButton from "material-ui/IconButton";
@@ -12,6 +10,7 @@ import Avatar from "material-ui/Avatar";
 import Badge from 'material-ui/Badge';
 import DependenciesList from "./DependenciesList";
 import dataDependency from './dependencies_data.json';
+import dataMyBooking from './my_booking_data.json';
 
 const style = {
     backgroundColor: "#eeeeee"
@@ -25,12 +24,12 @@ const SubHeader = () => (
     </Toolbar>
 );
 
-const BookItem = () => (
+const BookItem = (props) => (
     <ListItem
-        rightAvatar={<div style={{fontWeight: 'bold', color: deepOrange300, fontSize: 22}}><span>15</span> <br/> <span
-            style={{fontWeight: 'bold', fontSize: 12}}>ABR</span></div>}
-        primaryText="Salão de Festas"
-        secondaryText="18h às 22h"
+        rightAvatar={<div style={{fontWeight: 'bold', color: deepOrange300, fontSize: 22}}><span>{props.day}</span> <br/> <span
+            style={{fontWeight: 'bold', fontSize: 12}}>{props.month}</span></div>}
+        primaryText={props.dependency}
+        secondaryText={props.hour}
     />
 );
 
@@ -61,11 +60,15 @@ class Booking extends React.Component {
                                             </Badge>
                                         </ToolbarGroup>
                                     </Toolbar>
-                                    <BookItem/>
-                                    <BookItem/>
-                                    <BookItem/>
-                                    <BookItem/>
-                                    <BookItem/>
+                                    {dataMyBooking.map( (b, index) => (
+                                        <BookItem
+                                            key={b.id}
+                                            day={b.day}
+                                            month={b.month}
+                                            dependency={b.dependency}
+                                            hour={b.hour}
+                                        />
+                                    ))}
                                 </List>
                             </Paper>
                         </Col>
