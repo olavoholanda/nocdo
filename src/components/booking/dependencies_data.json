@@ -2,7 +2,8 @@
     "dependencies": [
         {
             "img": "/images/parque_infantil.jpg",
-            "title": "Parque Infatil",
+            "title": "Parque Infantil",
+            "description": "Playground composto de casinha, escorrega, balanço, gira-gira, escada de corda e amarelinha.",
             "price": "0",
             "capacity": "15",
             "weekDays": "Seg, Ter, Qua, Qui, Sex, Sáb, Dom",
@@ -12,6 +13,7 @@
         {
             "img": "/images/salao.png",
             "title": "Salão de Festas",
+            "description": "Anexo de lazer composto por centro de convívio, copa, banheiro masculino e feminino, geladeira, conjuntos de cadeiras e mesas de fibra.",
             "price": "50,00",
             "capacity": "75",
             "weekDays": "Ter, Qua, Qui, Sex, Sáb",
@@ -21,6 +23,7 @@
         {
             "img": "/images/quadra.jpg",
             "title": "Quadra de Esportes",
+            "description": "Quadra poli-esportiva, com piso em concreto, alambrado, traves, aros de basquete e refletores de iluminação.",
             "price": "0",
             "capacity": "15",
             "weekDays": "Seg, Ter, Qua, Qui, Sex, Sáb, Dom",
@@ -30,6 +33,7 @@
         {
             "img": "/images/piscina.jpg",
             "title": "Piscina",
+            "description": "Área de piscina composta de piscina com alturas compatíveis para uso adulto e infantil em fibra de vidro, concreto revestido em cerâmica ou vinil, deck em pedra irregular, casa de máquinas (filtro), lava-pés, portão de acesso e gradil circundado toda a área do deck.",
             "price": "15,00",
             "capacity": "15",
             "weekDays": "Seg, Ter, Qua, Qui, Sex, Sáb, Dom",
@@ -39,6 +43,7 @@
         {
             "img": "/images/churrasqueira.jpg",
             "title": "Churrasqueira",
+            "description": "Quiosque com churrasqueiras, conjuntos de mesas e cadeiras de plástico, copa, banho masculino e feminino, guarda sol.",
             "price": "30,00",
             "capacity": "20",
             "weekDays": "Qui, Sex, Sáb, Dom",
