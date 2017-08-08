@@ -5,7 +5,7 @@ import RaisedButton from "material-ui/RaisedButton";
 import TextField from "material-ui/TextField";
 import {grey700} from "material-ui/styles/colors";
 import * as roles from "../../utils/roles";
-import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn,} from 'material-ui/Table';
+import {Table, TableBody, TableHeaderColumn, TableRow, TableRowColumn,} from 'material-ui/Table';
 import Paper from "material-ui/Paper";
 import fixedData from "./documents_data.json";
 import FileTypeIcon from "../common/FileTypeIcon";
