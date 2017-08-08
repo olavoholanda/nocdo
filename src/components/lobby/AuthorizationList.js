@@ -9,6 +9,7 @@ import Paper from "material-ui/Paper";
 import Avatar from "material-ui/Avatar";
 import ListItem from "material-ui/List/ListItem";
 import fixedData from "./authorizations_data.json";
+import * as utils from "../../utils/utils";
 
 const SubHeader = () => (
     <Toolbar style={{backgroundColor: 'transparent'}}>
@@ -49,15 +50,15 @@ class AuthorizationList extends React.Component {
                                 <TableHeaderColumn>Data da Autorização</TableHeaderColumn>
                             </TableRow>
                             {fixedData.map((auth) => (
-                                <TableRow key={auth.id}>
+                                <TableRow key={auth.id} style={{cursor: 'pointer'}}>
                                     <TableRowColumn>
                                         <AvatarColumn img={auth.authorizedImg} name={auth.authorizedName} />
                                     </TableRowColumn>
-                                    <TableRowColumn>{auth.authDescription}</TableRowColumn>
+                                    <TableRowColumn>{utils.getAuthDescriptionLocale(auth.authDescription)}</TableRowColumn>
                                     <TableRowColumn>
                                         <AvatarColumn img={auth.ownerUsername} name={auth.owner} />
                                     </TableRowColumn>
-                                    <TableRowColumn>{auth.authDuration}</TableRowColumn>
+                                    <TableRowColumn>{utils.getAuthDurationLocale(auth.authDuration)}</TableRowColumn>
                                     <TableRowColumn>{auth.date}</TableRowColumn>
                                 </TableRow>
                             ))}
