@@ -1,0 +1,52 @@
+[
+  {
+    "id":"5",
+    "authorizedImg":"neil",
+    "authorizedName":"Neil Roberts",
+    "authDuration": "WEEK",
+    "authDescription": "GUEST",
+    "owner":"Seth Cohen",
+    "ownerUsername":"seth",
+    "date":"08/08/2017"
+  },
+  {
+    "id":"4",
+    "authorizedImg":"summer",
+    "authorizedName":"Summer Roberts",
+    "authDuration": "PERMANENT",
+    "authDescription": "FAMILY",
+    "owner":"Seth Cohen",
+    "ownerUsername":"seth",
+    "date":"08/08/2017"
+  },
+  {
+    "id":"3",
+    "authorizedImg":"taylor",
+    "authorizedName":"Taylor Townsend",
+    "authDuration": "DAY",
+    "authDescription": "GUEST",
+    "owner":"Seth Cohen",
+    "ownerUsername":"seth",
+    "date":"08/08/2017"
+  },
+  {
+    "id":"2",
+    "authorizedImg":"jimmy",
+    "authorizedName":"Jimmy Cooper",
+    "authDuration": "DAY",
+    "authDescription": "PROVIDER",
+    "owner":"Seth Cohen",
+    "ownerUsername":"seth",
+    "date":"08/08/2017"
+  },
+  {
+    "id":"1",
+    "authorizedImg":"ryan",
+    "authorizedName":"Ryan Atwood",
+    "authDuration": "PERMANENT",
+    "authDescription": "FAMILY",
+    "owner":"Seth Cohen",
+    "ownerUsername":"seth",
+    "date":"08/08/2017"
+  }
+]
