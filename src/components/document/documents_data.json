@@ -2,7 +2,7 @@
   {
     "id":"5",
     "name":"Novo Regimento da Fonte",
-    "type": "pdf",
+    "type": "jpg",
     "owner":"Caleb Nichol",
     "ownerUsername":"caleb",
     "date":"15/06/2015",
@@ -11,7 +11,7 @@
   {
     "id":"4",
     "name":"Resolução sobre o uso do Salão de Festas",
-    "type": "doc",
+    "type": "ppt",
     "owner":"Caleb Nichol",
     "ownerUsername":"caleb",
     "date":"24/08/2012",
@@ -20,7 +20,7 @@
   {
     "id":"3",
     "name":"Balancete 2016",
-    "type": "pdf",
+    "type": "xls",
     "owner":"Ryan Atwood",
     "ownerUsername":"ryan",
     "date":"25/01/2017",
