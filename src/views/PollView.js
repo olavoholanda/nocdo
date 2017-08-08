@@ -4,7 +4,7 @@ import PollList from "../components/poll/PollList";
 import PollForm from "../components/poll/PollForm";
 import {Route, Redirect, Switch} from "react-router-dom";
 
-class ForumView extends React.Component {
+class PollView extends React.Component {
 
     render() {
 
@@ -22,4 +22,4 @@ class ForumView extends React.Component {
     }
 }
 
-export default ForumView;
+export default PollView;

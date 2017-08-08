@@ -1,7 +1,7 @@
 import React from "react";
 import HeaderToolBar from "../components/common/HeaderToolBar";
 
-class ForumView extends React.Component {
+class ManagementView extends React.Component {
 
     render() {
 
@@ -14,4 +14,4 @@ class ForumView extends React.Component {
     }
 }
 
-export default ForumView;
+export default ManagementView;
