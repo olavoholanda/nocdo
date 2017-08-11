@@ -12,12 +12,12 @@ import FontIcon from "material-ui/FontIcon";
 
 const style = {
     header: {
-        background: "url(\"/images/lp_header_bg.png\")",
+        background: "url(\"/images/lp_header_bg2.png\")",
         minHeight: "100vh",
     },
     logo: {
         marginLeft: "5em",
-        marginTop: "0.3em"
+        marginTop: "0.3em",
     },
     appBar: {
         backgroundColor: "rgba(255, 87, 34, 0.35)"
@@ -41,7 +41,7 @@ function LandingPageLayout() {
         <div style={style.header}>
             <AppBar
                 style={style.appBar}
-                iconElementLeft={<img alt="Nocdo" style={style.logo} width="135px" src="/images/logo.png" />}
+                iconElementLeft={<img alt="Nocdo" style={style.logo} width="135px" src="/images/logo.svg" />}
             />
             <Grid fluid style={{paddingLeft: 15, paddingRight: 15}}>
                 <Row>
@@ -59,7 +59,7 @@ function LandingPageLayout() {
                     </Col>
                     <Col style={style.headerForm} md={6}>
                         <Paper style={{textAlign: "center", maxWidth: 400}}>
-                            <img alt="Nocdo" style={{marginTop: "1em"}} width="200px" src="/images/logo_dark.png" />
+                            <img alt="Nocdo" style={{marginTop: "1em"}} width="200px" src="/images/logo_grey.svg" />
                             <form style={{margin: "2em 1em", paddingBottom: 30}}>
                                 <TextField
                                     hintText="Nome de Usuário"
