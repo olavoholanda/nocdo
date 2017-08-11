@@ -41,7 +41,7 @@ function LandingPageLayout() {
         <div style={style.header}>
             <AppBar
                 style={style.appBar}
-                iconElementLeft={<img style={style.logo} width="135px" src="/images/logo.png" />}
+                iconElementLeft={<img alt="Nocdo" style={style.logo} width="135px" src="/images/logo.png" />}
             />
             <Grid fluid style={{paddingLeft: 15, paddingRight: 15}}>
                 <Row>
@@ -59,7 +59,7 @@ function LandingPageLayout() {
                     </Col>
                     <Col style={style.headerForm} md={6}>
                         <Paper style={{textAlign: "center", maxWidth: 400}}>
-                            <img style={{marginTop: "1em"}} width="200px" src="/images/logo_dark.png" />
+                            <img alt="Nocdo" style={{marginTop: "1em"}} width="200px" src="/images/logo_dark.png" />
                             <form style={{margin: "2em 1em", paddingBottom: 30}}>
                                 <TextField
                                     hintText="Nome de Usuário"
@@ -102,8 +102,8 @@ function LandingPageLayout() {
                             </div>
                         </Paper>
                         <div style={{maxWidth: 400, marginTop: "1em"}}>
-                            <img style={{float: "left"}} width="150px" src="/images/store_badges/androidPortuguese.png" />
-                            <img style={{float: "right"}} width="150px" src="/images/store_badges/iosPortuguese.png" />
+                            <img alt="Disponível na Google Play" style={{float: "left"}} width="150px" src="/images/store_badges/androidPortuguese.png" />
+                            <img alt="Disponível na Apple Store" style={{float: "right"}} width="150px" src="/images/store_badges/iosPortuguese.png" />
                         </div>
                     </Col>
                 </Row>

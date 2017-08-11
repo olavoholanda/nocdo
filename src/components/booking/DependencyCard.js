@@ -28,7 +28,7 @@ class DependencyCard extends React.Component {
                     <span>{d.description}</span>
                 </div>
                 <div style={{textAlign: "center", marginTop: "2em"}}>
-                    <img src={d.img} style={{width: "50%"}}/>
+                    <img alt={d.title} src={d.img} style={{width: "50%"}}/>
                 </div>
                 <div style={{marginLeft: "3em", marginRight: "3em"}}>
                     <List>
