@@ -10,11 +10,11 @@ class DocumentView extends React.Component {
 
         return (
             <div>
-                <HeaderToolBar link="/documents" title="Documentos" icon="account_balance"/>
+                <HeaderToolBar link="/in/documents" title="Documentos" icon="account_balance"/>
                 <Switch>
-                    <Route exact path={"/documents/list"} component={DocumentList}/>
-                    <Route exact path={"/documents/upload"} component={DocumentForm}/>
-                    <Redirect exact from="/documents" to="/documents/list"/>
+                    <Route exact path={"/in/documents/list"} component={DocumentList}/>
+                    <Route exact path={"/in/documents/upload"} component={DocumentForm}/>
+                    <Redirect exact from="/in/documents" to="/in/documents/list"/>
                 </Switch>
             </div>
         );

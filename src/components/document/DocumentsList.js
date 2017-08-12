@@ -31,7 +31,7 @@ class SubHeader extends React.Component {
 
         let adminButton = '';
         if(this.state.role === roles.ROLE_MANAGER){
-            adminButton = <RaisedButton label="Enviar Documento" href="/documents/upload" primary={true}/>;
+            adminButton = <RaisedButton label="Enviar Documento" href="/in/documents/upload" primary={true}/>;
         }
 
         return (

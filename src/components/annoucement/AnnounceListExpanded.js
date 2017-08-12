@@ -33,7 +33,7 @@ class CustomToolBar extends React.Component {
 
         let adminButton = '';
         if(this.state.role === roles.ROLE_MANAGER){
-            adminButton = <RaisedButton label="Novo Aviso" href="/announce/save" primary={true}/>;
+            adminButton = <RaisedButton label="Novo Aviso" href="/in/announce/save" primary={true}/>;
         }
 
         return (

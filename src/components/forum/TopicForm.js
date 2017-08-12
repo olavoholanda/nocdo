@@ -113,7 +113,7 @@ class NewTopicForm extends React.Component {
                     <RaisedButton
                         style={{float: 'left'}}
                         label="Descartar"
-                        href="/forum/topics"
+                        href="/in/forum/topics"
                     />
                     <RaisedButton
                         style={{float: 'right'}}

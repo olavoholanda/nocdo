@@ -11,14 +11,14 @@ class ForumView extends React.Component {
 
         return (
             <div>
-                <HeaderToolBar link="/forum" title="Fórum" icon="forum"/>
+                <HeaderToolBar link="/in/forum" title="Fórum" icon="forum"/>
                 <Switch>
-                    <Route exact path={"/forum/topics"} component={TopicList}/>
-                    <Route path={"/forum/topics/:page"} component={TopicList}/>
-                    <Route path={"/forum/messages"} component={MessageList}/>
-                    <Route path={"/forum/topic/new"} component={TopicForm}/>
-                    <Route path={"/forum/topic/edit/:id"} component={TopicForm}/>
-                    <Redirect exact from="/forum" to="/forum/topics"/>
+                    <Route exact path={"/in/forum/topics"} component={TopicList}/>
+                    <Route path={"/in/forum/topics/:page"} component={TopicList}/>
+                    <Route path={"/in/forum/messages"} component={MessageList}/>
+                    <Route path={"/in/forum/topic/new"} component={TopicForm}/>
+                    <Route path={"/in/forum/topic/edit/:id"} component={TopicForm}/>
+                    <Redirect exact from="/in/forum" to="/in/forum/topics"/>
                 </Switch>
             </div>
         );

@@ -9,10 +9,10 @@ class ReservationView extends React.Component {
 
         return (
             <div>
-                <HeaderToolBar link="/booking" title="Reservas" icon="event"/>
+                <HeaderToolBar link="/in/booking" title="Reservas" icon="event"/>
                 <Switch>
-                    <Route exact path={"/booking/dependencies"} component={Booking}/>
-                    <Redirect exact from="/booking" to="/booking/dependencies"/>
+                    <Route exact path={"/in/booking/dependencies"} component={Booking}/>
+                    <Redirect exact from="/in/booking" to="/in/booking/dependencies"/>
                 </Switch>
             </div>
         );

@@ -81,6 +81,7 @@ function LandingPageLayout() {
                                         label="Entrar"
                                         type="submit"
                                         value="Post"
+                                        href="/in"
                                         secondary={true}
                                     />
                                 </div>
@@ -91,7 +92,7 @@ function LandingPageLayout() {
                             <RaisedButton
                                 style={{marginBottom: "1em"}}
                                 label="Entrar com Facebook"
-                                href="#"
+                                href="/in"
                                 secondary={true}
                                 icon={<FontIcon className="fa fa-facebook"/>}
                             />

@@ -266,7 +266,7 @@ class PollForm extends React.Component {
                                         <RaisedButton
                                             style={{float: 'left'}}
                                             label="Descartar"
-                                            href="/poll/list"
+                                            href="/in/poll/list"
                                         />
                                     </Col>
                                     <Col md={6}>

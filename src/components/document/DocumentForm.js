@@ -79,7 +79,7 @@ class DocumentForm extends React.Component {
                     <RaisedButton
                         style={{float: 'left'}}
                         label="Descartar"
-                        href="/documents/list"
+                        href="/in/documents/list"
                     />
                     <RaisedButton
                         style={{float: 'right'}}

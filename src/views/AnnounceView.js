@@ -8,12 +8,12 @@ class AnnounceView extends React.Component {
     render() {
         return (
             <div>
-                <HeaderToolBar link="/announce" title="Avisos" icon="announcement"/>
+                <HeaderToolBar link="/in/announce" title="Avisos" icon="announcement"/>
                 <Switch>
-                    <Route exact path={"/announce/list"} component={AnnounceListExpanded}/>
-                    <Route path={"/announce/save"} component={AnnounceForm}/>
-                    <Route path={"/announce/edit/:id"} component={AnnounceForm}/>
-                    <Redirect exact from="/announce" to="/announce/list"/>
+                    <Route exact path={"/in/announce/list"} component={AnnounceListExpanded}/>
+                    <Route path={"/in/announce/save"} component={AnnounceForm}/>
+                    <Route path={"/in/announce/edit/:id"} component={AnnounceForm}/>
+                    <Redirect exact from="/in/announce" to="/in/announce/list"/>
                 </Switch>
             </div>
         );

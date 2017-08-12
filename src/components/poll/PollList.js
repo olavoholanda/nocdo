@@ -39,7 +39,7 @@ class SubHeader extends React.Component {
                     <TextField hintText="Buscar Enquete"/>
                     <FontIcon className="material-icons">search</FontIcon>
                     <ToolbarSeparator/>
-                    <RaisedButton label="Nova Enquete" href="/poll/new" primary={true}/>
+                    <RaisedButton label="Nova Enquete" href="/in/poll/new" primary={true}/>
                 </ToolbarGroup>
             </Toolbar>
         );

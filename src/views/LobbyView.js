@@ -9,10 +9,10 @@ class LobbyView extends React.Component {
 
         return (
             <div>
-                <HeaderToolBar link="/lobby" title="Portaria" icon="store"/>
+                <HeaderToolBar link="/in/lobby" title="Portaria" icon="store"/>
                 <Switch>
-                    <Route exact path={"/lobby/list"} component={AuthorizationList}/>
-                    <Redirect exact from="/lobby" to="/lobby/list"/>
+                    <Route exact path={"/in/lobby/list"} component={AuthorizationList}/>
+                    <Redirect exact from="/in/lobby" to="/in/lobby/list"/>
                 </Switch>
             </div>
         );

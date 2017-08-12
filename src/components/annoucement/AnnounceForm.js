@@ -122,7 +122,7 @@ class AnnounceForm extends React.Component {
                     <RaisedButton
                         style={{float: 'left'}}
                         label="Descartar"
-                        href="/announce/list"
+                        href="/in/announce/list"
                     />
                     <RaisedButton
                         style={{float: 'right'}}

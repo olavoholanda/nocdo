@@ -1,5 +1,5 @@
 import React from "react";
-import {Route, Switch} from "react-router-dom";
+import {Route, Switch, Redirect} from "react-router-dom";
 import HomeView from "../views/HomeView";
 import AnnounceView from "../views/AnnounceView";
 import ForumView from "../views/ForumView";
@@ -14,14 +14,14 @@ class Routes extends React.Component {
         return (
             <div>
                 <Switch>
-                    <Route path="/home" component={HomeView}/>
-                    <Route path="/announce" component={AnnounceView}/>
-                    <Route path="/poll" component={PollView}/>
-                    <Route path="/forum" component={ForumView}/>
-                    <Route path="/lobby" component={LobbyView}/>
-                    <Route path="/booking" component={BookingView}/>
-                    <Route path="/collaborators" component={CollaboratorView}/>
-                    <Route path="/documents" component={DocumentView}/>
+                    <Route path="/in/home" component={HomeView}/>
+                    <Route path="/in/announce" component={AnnounceView}/>
+                    <Route path="/in/poll" component={PollView}/>
+                    <Route path="/in/forum" component={ForumView}/>
+                    <Route path="/in/lobby" component={LobbyView}/>
+                    <Route path="/in/booking" component={BookingView}/>
+                    <Route path="/in/collaborators" component={CollaboratorView}/>
+                    <Route path="/in/documents" component={DocumentView}/>
                 </Switch>
             </div>
         )

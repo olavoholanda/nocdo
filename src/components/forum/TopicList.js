@@ -29,7 +29,7 @@ const SubHeader = () => (
             <TextField hintText="Buscar Tópico"/>
             <FontIcon className="material-icons">search</FontIcon>
             <ToolbarSeparator/>
-            <RaisedButton label="Novo Tópico" href="/forum/topic/new" primary={true}/>
+            <RaisedButton label="Novo Tópico" href="/in/forum/topic/new" primary={true}/>
         </ToolbarGroup>
     </Toolbar>
 );

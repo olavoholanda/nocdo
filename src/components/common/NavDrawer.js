@@ -72,24 +72,24 @@ class NavDrawer extends React.Component {
                 </div>
                 <Divider style={styleDivider}/>
                 <List>
-                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Início" href="/home"
+                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Início" href="/in/home"
                               leftIcon={<FontIcon style={styleWhite} className="material-icons">home</FontIcon>}/>
-                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Avisos" href="/announce"
+                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Avisos" href="/in/announce"
                               leftIcon={<FontIcon style={styleWhite}
                                                   className="material-icons">announcement</FontIcon>}/>
-                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Enquetes" href="/poll"
+                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Enquetes" href="/in/poll"
                               leftIcon={<FontIcon style={styleWhite} className="material-icons">poll</FontIcon>}/>
-                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Forum" href="/forum"
+                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Forum" href="/in/forum"
                               leftIcon={<FontIcon style={styleWhite} className="material-icons">forum</FontIcon>}/>
-                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Portaria" href="/lobby"
+                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Portaria" href="/in/lobby"
                               leftIcon={<FontIcon style={styleWhite} className="material-icons">store</FontIcon>}/>
-                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Reservas" href="/booking"
+                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Reservas" href="/in/booking"
                               leftIcon={<FontIcon style={styleWhite} className="material-icons">event</FontIcon>}/>
                     {/*<ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Colaboradores"*/}
-                              {/*href="/collaborators"*/}
+                              {/*href="/in/collaborators"*/}
                               {/*leftIcon={<FontIcon style={styleWhite}*/}
                                                   {/*className="material-icons">recent_actors</FontIcon>}/>*/}
-                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Documentos" href="/documents"
+                    <ListItem hoverColor={deepOrangeA400} style={styleWhite} primaryText="Documentos" href="/in/documents"
                               leftIcon={<FontIcon style={styleWhite}
                                                   className="material-icons">account_balance</FontIcon>}/>
                 </List>

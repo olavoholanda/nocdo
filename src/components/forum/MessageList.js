@@ -24,7 +24,7 @@ const floatingStyle = {
 const SubHeader = () => (
     <Toolbar style={style}>
         <ToolbarGroup firstChild={true}>
-            <IconButton style={{marginLeft: 20}} href="/forum/topics" tooltip="Voltar">
+            <IconButton style={{marginLeft: 20}} href="/in/forum/topics" tooltip="Voltar">
                 <FontIcon className="material-icons">arrow_back</FontIcon>
             </IconButton>
             <span style={{marginLeft: 5, color: grey700, fontSize: 14}}>Discussão: Vida em condomínio: sonho ou pesadelo?</span>

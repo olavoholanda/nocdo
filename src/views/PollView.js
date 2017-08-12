@@ -10,12 +10,12 @@ class PollView extends React.Component {
 
         return (
             <div>
-                <HeaderToolBar link="/poll" title="Enquetes" icon="view_list"/>
+                <HeaderToolBar link="/in/poll" title="Enquetes" icon="view_list"/>
                 <Switch>
-                    <Route exact path={"/poll/list"} component={PollList}/>
-                    <Route exact path={"/poll/new"} component={PollForm}/>
-                    <Route exact path={"/poll/edit/:id"} component={PollForm}/>
-                    <Redirect exact from="/poll" to="/poll/list"/>
+                    <Route exact path={"/in/poll/list"} component={PollList}/>
+                    <Route exact path={"/in/poll/new"} component={PollForm}/>
+                    <Route exact path={"/in/poll/edit/:id"} component={PollForm}/>
+                    <Redirect exact from="/in/poll" to="/in/poll/list"/>
                 </Switch>
             </div>
         );

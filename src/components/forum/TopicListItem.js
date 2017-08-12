@@ -23,7 +23,7 @@ class TopicListItem extends React.Component {
                 <Col md={1} style={{textAlign: 'center'}}>{categories.management()}</Col>
                 <Col md={7}>
                     <div>
-                        <Link color={indigo900} hoverColor={deepOrangeA400} text={topic.title} link="/forum/messages"/>
+                        <Link color={indigo900} hoverColor={deepOrangeA400} text={topic.title} link="/in/forum/messages"/>
                     </div>
                     <div style={{fontSize: 12, paddingTop: 5, paddingBottom: 5}}>
                         por <Link color={indigo900} hoverColor={deepOrangeA400} text="Ryan Atwood" link="href"/>
